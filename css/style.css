@@ -1,5 +1,4 @@
-
-/* Colores principales de Bochito */
+/* Estilo compartido de Bochito */
 :root {
     --azul-oscuro: #06485b;
     --verde-azulado: #197575;
@@ -8,270 +7,96 @@
     --texto: #263238;
     --blanco: #ffffff;
 }
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 85px;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 body {
-    margin: 0;
-    background-color: var(--fondo);
-    color: var(--texto);
+    margin: 0; background: var(--fondo); color: var(--texto);
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Barra de navegación */
-.navbar-bochito {
-    background-color: var(--azul-oscuro);
-    padding: 12px 0;
-}
-
-.navbar-brand {
-    gap: 9px;
-}
-
+.navbar-bochito { background: var(--azul-oscuro); padding: 12px 0; }
+.navbar-brand { gap: 9px; }
 .logo {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: contain;
-    background-color: white;
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 2px solid white; object-fit: cover; background: white;
 }
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.brand-text strong {
-    font-size: 20px;
-}
-
-.brand-text small {
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.navbar-bochito .nav-link {
-    color: white;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 20px; }
+.brand-text small { font-size: 12px; font-weight: normal; }
+.navbar-bochito .nav-link { color: white; font-size: 14px; }
 .navbar-bochito .nav-link:hover,
-.navbar-bochito .nav-link:focus {
-    color: var(--amarillo);
-}
-
+.navbar-bochito .nav-link:focus,
+.navbar-bochito .nav-link.active { color: var(--amarillo); }
 .btn-acceso {
-    background-color: var(--amarillo);
-    color: var(--azul-oscuro);
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-weight: bold;
+    background: var(--amarillo); color: var(--azul-oscuro);
+    border-radius: 25px; padding: 10px 20px; font-weight: bold;
 }
-
-.btn-acceso:hover {
-    background-color: #eaa600;
-    color: var(--azul-oscuro);
+.btn-acceso:hover { background: #eaa600; color: var(--azul-oscuro); }
+.hero { background: var(--verde-azulado); color: white; padding: 55px 15px; }
+.hero h1 { font-size: 40px; font-weight: bold; margin: 10px 0 12px; }
+.hero p { font-size: 18px; max-width: 850px; margin: 0 auto; }
+.hero-etiqueta {
+    display: inline-block; border: 1px solid rgba(255,255,255,.65);
+    border-radius: 20px; padding: 5px 14px; font-weight: bold;
 }
-
-/* Encabezado */
-.hero {
-    background-color: var(--verde-azulado);
-    color: white;
-    padding: 55px 15px;
-}
-
-.hero h1 {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 0;
-}
-
-/* Contenido */
-.contenido {
-    padding-top: 40px;
-    padding-bottom: 55px;
-}
-
-.introduccion {
-    margin-bottom: 30px;
-}
-
-.introduccion h2 {
-    font-size: 27px;
-    font-weight: bold;
-}
-
-.introduccion p {
-    color: #64747a;
-    max-width: 650px;
-    margin: 10px auto 0;
-}
-
-/* Tarjetas */
+.contenido { padding-top: 40px; padding-bottom: 55px; }
+.introduccion { margin-bottom: 30px; }
+.introduccion h2, .tarjeta h2 { font-size: 27px; font-weight: bold; }
+.introduccion p { color: #64747a; max-width: 650px; margin: 10px auto 0; }
 .tarjeta {
-    border: none;
-    border-radius: 14px;
-    background-color: var(--blanco);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
-    transition: transform 0.25s, box-shadow 0.25s;
+    border: none; border-radius: 14px; background: var(--blanco);
+    box-shadow: 0 3px 12px rgba(0,0,0,.07);
 }
-
-.tarjeta:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
-}
-
-.tarjeta .card-body {
-    padding: 27px;
-}
-
+.tarjeta .card-body { padding: 27px; }
 .icono-tarjeta {
-    width: 55px;
-    height: 55px;
-    border-radius: 12px;
-    background-color: #e5f2f2;
-    color: var(--azul-oscuro);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 27px;
-    margin-bottom: 18px;
+    width: 55px; height: 55px; border-radius: 12px;
+    background: #e5f2f2; color: var(--azul-oscuro);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 27px; margin-bottom: 18px;
 }
-
 .etiqueta {
-    display: inline-block;
-    background-color: #e5f2f2;
-    color: var(--azul-oscuro);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    display: inline-block; background: #e5f2f2; color: var(--azul-oscuro);
+    padding: 5px 12px; border-radius: 20px; font-size: 12px;
+    font-weight: bold; margin-bottom: 10px;
 }
-
-.tarjeta h3 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.tarjeta p {
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.estado {
-    background-color: #f0f6f6;
-    border-radius: 8px;
-    padding: 12px;
-    margin: 18px 0;
-    font-size: 13px;
-}
-
-.punto {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    background-color: #d99a00;
-    border-radius: 50%;
-    margin-right: 6px;
-}
-
-/* Botones */
+.tarjeta h2 { font-size: 23px; margin-bottom: 12px; }
+.tarjeta h3 { font-size: 18px; font-weight: bold; margin-bottom: 6px; }
+.tarjeta p { font-size: 15px; line-height: 1.7; }
 .btn-bochito {
-    width: 100%;
-    background-color: var(--azul-oscuro);
-    color: white;
-    border-radius: 25px;
-    padding: 11px;
-    font-weight: bold;
+    background: var(--azul-oscuro); color: white; border-radius: 25px;
+    padding: 11px 18px; font-weight: bold;
 }
-
-.btn-bochito:hover,
-.btn-bochito:focus {
-    background-color: #08647a;
-    color: white;
+.card .btn-bochito { width: 100%; }
+.btn-bochito:hover, .btn-bochito:focus { background: #08647a; color: white; }
+.btn-secundario {
+    border: 1px solid var(--azul-oscuro); color: var(--azul-oscuro);
+    background: white; border-radius: 25px; padding: 10px 18px;
 }
-
-.detalle {
-    background-color: #f3f7f8;
-    border-left: 4px solid var(--verde-azulado);
-    border-radius: 5px;
-    padding: 12px;
-    margin-top: 16px;
-    margin-bottom: 0;
-}
-
-/* Nota informativa */
+.btn-secundario:hover { background: #e5f2f2; color: var(--azul-oscuro); }
 .nota {
-    padding: 18px;
-    background-color: white;
-    border-radius: 10px;
-    border-left: 4px solid var(--amarillo);
-    font-size: 14px;
-    line-height: 1.7;
+    padding: 16px; background: #f3f7f8; border-radius: 10px;
+    border-left: 4px solid var(--amarillo); font-size: 14px; line-height: 1.7;
 }
-
-.nota i {
-    color: var(--azul-oscuro);
-    margin-right: 5px;
+.nota i { color: var(--azul-oscuro); margin-right: 5px; }
+.accion-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: #f7f9fa; border-radius: 10px; padding: 17px;
 }
-
-/* Pie de página */
-.footer-bochito {
-    background-color: var(--azul-oscuro);
-    color: white;
-    padding: 20px 10px;
-    font-size: 13px;
+.accion-numero {
+    flex: 0 0 32px; height: 32px; display: flex; align-items: center;
+    justify-content: center; border-radius: 50%; color: white;
+    background: var(--verde-azulado); font-weight: bold;
 }
-
-/* Adaptación para celulares */
+.accion-item p { margin-bottom: 0; }
+.titulo-seccion { margin-bottom: 20px !important; }
+.footer-bochito { background: var(--azul-oscuro); color: white; padding: 20px 10px; font-size: 13px; }
 @media (max-width: 991px) {
-    .navbar-nav {
-        align-items: stretch !important;
-        padding-top: 12px;
-    }
-
-    .btn-acceso {
-        display: inline-block;
-        text-align: center;
-        margin-top: 8px;
-    }
+    .navbar-nav { align-items: stretch !important; padding-top: 12px; }
+    .btn-acceso { display: inline-block; text-align: center; margin-top: 8px; }
 }
-
 @media (max-width: 576px) {
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .hero h1 {
-        font-size: 29px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .introduccion h2 {
-        font-size: 23px;
-    }
-
-    .tarjeta .card-body {
-        padding: 22px;
-    }
+    .hero { padding: 40px 15px; }
+    .hero h1 { font-size: 29px; }
+    .hero p { font-size: 16px; }
+    .introduccion h2, .tarjeta h2 { font-size: 23px; }
+    .tarjeta .card-body { padding: 22px; }
 }
