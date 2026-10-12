@@ -1,9 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>bochito - Centro de ayuda</title>
+
+  <!-- BOOTSTRAP 5.0.2 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  >
 
   <!-- Fuentes de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,15 +23,20 @@
   <!-- Iconos de FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- LLAMADA AL ARCHIVO CSS EXTERNO -->
+  <!-- CSS PERSONALIZADO: DEBE IR DESPUÉS DE BOOTSTRAP -->
   <link rel="stylesheet" href="ayuda.css">
 </head>
+
 <body>
 
   <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
   <header class="navbar">
     <div class="logo-container">
-      <img src="img/logo.png" alt="Logo Vochito Envíos y Ventas" width="40" height="40" class="rounded-circle d-inline-block align-text-top">
+      <img src="img/logo.png"
+           alt="Logo Vochito Envíos y Ventas"
+           width="40"
+           height="40"
+           class="rounded-circle d-inline-block align-text-top">
     </div>
 
     <nav class="nav-links">
@@ -36,15 +51,21 @@
         <input type="text" placeholder="Buscar productos...">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
       </div>
-      <button class="user-btn" type="button"><i class="fa-solid fa-user"></i></button>
-      <button class="cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i></button>
+
+      <button class="user-btn" type="button">
+        <i class="fa-solid fa-user"></i>
+      </button>
+
+      <button class="cart-btn" type="button">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
     </div>
   </header>
 
   <!-- CONTENEDOR PRINCIPAL -->
   <div class="main-layout">
-    
-    <!-- BARRA LATERAL (SIDEBAR) -->
+
+    <!-- BARRA LATERAL -->
     <aside class="sidebar">
       <div class="sidebar-header">
         <div class="icon-circle icon-dark-teal">
@@ -60,24 +81,28 @@
           </div>
           <span>Preguntas frecuentes</span>
         </li>
+
         <li>
           <div class="icon-circle icon-soft-blue">
             <i class="fa-solid fa-book-open"></i>
           </div>
           <span>Guía de compra y venta</span>
         </li>
+
         <li>
           <div class="icon-circle icon-soft-purple">
             <i class="fa-solid fa-file-lines"></i>
           </div>
           <span>Términos y condiciones</span>
         </li>
+
         <li>
           <div class="icon-circle icon-soft-pink">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
           <span>Política de privacidad</span>
         </li>
+
         <li>
           <div class="icon-circle icon-soft-orange">
             <i class="fa-solid fa-headset"></i>
@@ -89,31 +114,38 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="content-area">
-      
+
       <h1 class="page-title">bochito</h1>
+
       <p class="page-subtitle">
-        Aquí encontrarás respuestas a las preguntas más comunes. Si no encuentras lo que necesitas, puedes contactarnos en la sección de soporte.
+        Aquí encontrarás respuestas a las preguntas más comunes.
+        Si no encuentras lo que necesitas, puedes contactarnos
+        en la sección de soporte.
       </p>
 
-      <!-- BARRA DE BÚSQUEDA INTERNA -->
+      <!-- BARRA DE BÚSQUEDA -->
       <div class="faq-search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Buscar una pregunta...">
       </div>
 
-      <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+      <!-- PREGUNTAS FRECUENTES -->
       <section class="faq-section">
         <h2 class="section-title">Preguntas frecuentes</h2>
 
         <div class="accordion">
-          
+
           <details class="accordion-item">
             <summary class="accordion-header">
               <span>¿Cómo creo una cuenta en la aplicación?</span>
               <i class="fa-solid fa-plus icon-toggle"></i>
             </summary>
             <div class="accordion-content">
-              <p>Para crear una cuenta, haz clic en el icono de usuario en la esquina superior derecha y selecciona "Registrarse". Completa tus datos personales y confirma tu correo electrónico.</p>
+              <p>
+                Para crear una cuenta, haz clic en el icono de usuario
+                en la esquina superior derecha y selecciona "Registrarse".
+                Completa tus datos personales y confirma tu correo electrónico.
+              </p>
             </div>
           </details>
 
@@ -123,7 +155,11 @@
               <i class="fa-solid fa-plus icon-toggle"></i>
             </summary>
             <div class="accordion-content">
-              <p>Inicia sesión con tu cuenta de vendedor, dirígete a tu panel de control y haz clic en "Nuevo Producto". Agrega las fotos, descripción, precio y stock disponible.</p>
+              <p>
+                Inicia sesión con tu cuenta de vendedor, dirígete a tu
+                panel de control y haz clic en "Nuevo Producto". Agrega
+                las fotos, descripción, precio y stock disponible.
+              </p>
             </div>
           </details>
 
@@ -133,7 +169,11 @@
               <i class="fa-solid fa-plus icon-toggle"></i>
             </summary>
             <div class="accordion-content">
-              <p>Aceptamos tarjetas de crédito/débito (Visa, Mastercard), transferencias bancarias directas y pagos mediante nuestra billetera digital.</p>
+              <p>
+                Aceptamos tarjetas de crédito/débito (Visa, Mastercard),
+                transferencias bancarias directas y pagos mediante
+                nuestra billetera digital.
+              </p>
             </div>
           </details>
 
@@ -143,7 +183,11 @@
               <i class="fa-solid fa-plus icon-toggle"></i>
             </summary>
             <div class="accordion-content">
-              <p>Puedes rastrear tu envío ingresando a la sección "Mis Pedidos" en tu perfil de usuario o utilizando el número de guía enviado a tu correo.</p>
+              <p>
+                Puedes rastrear tu envío ingresando a la sección
+                "Mis Pedidos" en tu perfil de usuario o utilizando
+                el número de guía enviado a tu correo.
+              </p>
             </div>
           </details>
 
@@ -153,34 +197,45 @@
               <i class="fa-solid fa-plus icon-toggle"></i>
             </summary>
             <div class="accordion-content">
-              <p>Puedes abrir una disputa o contactar directamente a nuestro equipo de soporte técnico haciendo clic en el botón "Contactar soporte" al final de esta página.</p>
+              <p>
+                Puedes abrir una disputa o contactar directamente a
+                nuestro equipo de soporte técnico haciendo clic en
+                el botón "Contactar soporte" al final de esta página.
+              </p>
             </div>
           </details>
 
         </div>
       </section>
 
-      <!-- CARD BANNER DE SOPORTE -->
+      <!-- TARJETA DE SOPORTE -->
       <div class="support-card">
         <div class="support-info">
           <div class="icon-circle icon-support-large">
             <i class="fa-solid fa-headset"></i>
           </div>
+
           <div>
             <h3>¿Necesitas más ayuda?</h3>
-            <p>Si no encontraste lo que buscabas, puedes contactarnos directamente. Estamos para ayudarte.</p>
+            <p>
+              Si no encontraste lo que buscabas, puedes contactarnos
+              directamente. Estamos para ayudarte.
+            </p>
           </div>
         </div>
+
         <button class="btn-support" type="button">
-          <i class="fa-solid fa-envelope"></i> Contactar soporte
+          <i class="fa-solid fa-envelope"></i>
+          Contactar soporte
         </button>
       </div>
 
     </main>
   </div>
 
-  <!-- PIE DE PÁGINA / BANNER INFERIOR DE VALORES -->
+  <!-- PIE DE PÁGINA -->
   <footer class="footer-banner">
+
     <div class="footer-item">
       <div class="icon-circle icon-footer-blue">
         <i class="fa-solid fa-shield-halved"></i>
@@ -210,7 +265,16 @@
         <p>Más que una plataforma, somos raíces.</p>
       </div>
     </div>
+
   </footer>
+
+  <!-- JAVASCRIPT DE BOOTSTRAP 5.0.2 -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFY1zcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+  </script>
 
 </body>
 </html>
+```
