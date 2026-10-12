@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Requerimientos no funcionales del sistema Bochito.">
+    <title>Seguridad | Bochito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bochito">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="Logotipo de Bochito" class="logo">
+                <span class="brand-text"><strong>Bochito</strong><small>Comercio local</small></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link " href="index.html"><i class="bi bi-house-fill"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF03.html">RNF03</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF04.html">RNF04</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="RNF05.html">RNF05</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF06.html">RNF06</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-acceso" href="RNF05.html"><i class="bi bi-box-arrow-in-right"></i> Acceso</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container text-center">
+            <span class="hero-etiqueta">RNF05</span>
+            <h1>Seguridad</h1>
+            <p>El sistema deberá proteger la información y restringir las operaciones de acuerdo con la identidad y los permisos de cada usuario.</p>
+        </div>
+    </header>
+    <main class="container contenido">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <section class="card tarjeta mb-4">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h2>Objetivo del requerimiento</h2>
+                        <p>Aplicar autenticación, autorización, validación de datos y protección de las comunicaciones según el alcance del proyecto.</p>
+                        <div class="nota"><i class="bi bi-info-circle-fill"></i> Esta página informativa no implementa por sí sola autenticación ni protección real del sistema.</div>
+                    </div>
+                </section>
+                <section class="card tarjeta">
+                    <div class="card-body">
+                        <h2 class="titulo-seccion">Acciones propuestas</h2>
+                        <div class="row g-3">
+                            
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">1</span>
+                        <div><h3>Control de acceso</h3><p>Verificar la identidad y los permisos antes de permitir operaciones protegidas.</p></div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">2</span>
+                        <div><h3>Protección de información</h3><p>No guardar contraseñas en texto plano; utilizar mecanismos seguros del lado del servidor.</p></div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">3</span>
+                        <div><h3>Validación y comunicación</h3><p>Validar los datos en el servidor y usar HTTPS en el entorno publicado.</p></div>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+                </section>
+                <div class="d-flex flex-wrap justify-content-between gap-2 mt-4">
+                    <a class="btn btn-secundario" href="index.html"><i class="bi bi-arrow-left"></i> Volver al inicio</a>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-bochito" href="RNF03.html">RNF03</a>
+                        <a class="btn btn-bochito" href="RNF04.html">RNF04</a>
+                        <a class="btn btn-bochito" href="RNF05.html">RNF05</a>
+                        <a class="btn btn-bochito" href="RNF06.html">RNF06</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bochito">
+        <div class="container text-center">© 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
