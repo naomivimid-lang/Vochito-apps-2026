@@ -1,110 +1,303 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RNF04: Integridad de las comunicaciones del sistema Bochito.">
 
-    <title>RNF04 - Comunicaciones | Vochito</title>
+    <title>Integridad de las comunicaciones | Bochito</title>
 
     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Estilos propios -->
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Estilos de Bochito -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- JavaScript del requerimiento -->
-    <script src="../js/rnf04-comunicaciones.js" defer></script>
+    <!-- JavaScript del simulador -->
+    <script src="js/rnf04-comunicaciones.js" defer></script>
 </head>
 
 <body>
 
-    <header class="encabezado">
-        <nav class="container py-3 d-flex justify-content-between align-items-center">
-            <a class="marca" href="../index.html">Vochito</a>
-            <span class="badge etiqueta">RNF04</span>
-        </nav>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bochito">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center"
+               href="index.html">
+
+                <img src="img/logo.png"
+                     alt="Logotipo de Bochito"
+                     class="logo">
+
+                <span class="brand-text">
+                    <strong>Bochito</strong>
+                    <small>Comercio local</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill"></i> Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="RNF03.html">RNF03</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="RNF04.html">RNF04</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="RNF05.html">RNF05</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="RNF06.html">RNF06</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-acceso" href="RNF05.html">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Acceso
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <header class="hero">
+        <div class="container text-center">
+
+            <span class="hero-etiqueta">RNF04</span>
+
+            <h1>Integridad de las comunicaciones</h1>
+
+            <p>
+                Las solicitudes que fallen temporalmente deben poder
+                reintentarse para reducir el riesgo de perder operaciones.
+            </p>
+
+        </div>
     </header>
 
-    <main class="container py-5">
+    <!-- Contenido principal -->
+    <main class="container contenido">
 
-        <p class="subtitulo">REQUERIMIENTO NO FUNCIONAL</p>
+        <div class="row justify-content-center">
 
-        <h1>Integridad de las comunicaciones</h1>
+            <div class="col-12 col-lg-9">
 
-        <p>
-            Las solicitudes que fallen temporalmente deben poder
-            reintentarse para reducir el riesgo de perder operaciones.
-        </p>
-
-        <!-- Fila responsiva -->
-        <div class="row g-4 mt-2">
-
-            <!-- Columna adaptable -->
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <section class="card tarjeta h-100">
+                <!-- Tarjeta del objetivo -->
+                <section class="card tarjeta mb-4">
 
                     <div class="card-body">
 
-                        <h2 class="h4">Simulador de solicitudes</h2>
+                        <div class="icono-tarjeta">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
 
-                        <label for="operacion" class="form-label">
-                            Descripción de la operación
-                        </label>
+                        <h2>Objetivo del requerimiento</h2>
 
-                        <input
-                            id="operacion"
-                            class="form-control mb-3"
-                            type="text"
-                            maxlength="120"
-                            placeholder="Ej. Registrar un pedido"
-                        >
+                        <p>
+                            Permitir que las solicitudes que fallen
+                            temporalmente puedan reintentarse, reduciendo
+                            el riesgo de perder operaciones durante la
+                            comunicación entre los componentes del sistema.
+                        </p>
 
-                        <div class="d-flex flex-wrap gap-2">
+                        <div class="nota">
+                            <i class="bi bi-info-circle-fill"></i>
+                            Esta página contiene una demostración local
+                            del mecanismo de reintento. No representa una
+                            conexión con un servidor real.
+                        </div>
 
-                            <button id="agregar" type="button"
-                                    class="btn btn-primary">
-                                Agregar solicitud
-                            </button>
+                    </div>
+                </section>
 
-                            <button id="reintentar" type="button"
-                                    class="btn btn-outline-primary">
-                                Simular reintento
-                            </button>
+                <!-- Tarjeta del simulador -->
+                <section class="card tarjeta mb-4">
+
+                    <div class="card-body">
+
+                        <h2 class="titulo-seccion">
+                            Simulador de solicitudes
+                        </h2>
+
+                        <p>
+                            Agrega una operación y utiliza el botón de
+                            reintento para simular el procesamiento de
+                            solicitudes pendientes.
+                        </p>
+
+                        <div class="row g-3">
+
+                            <!-- Columna responsiva -->
+                            <div class="col-12 col-md-6 col-lg-4">
+
+                                <label for="operacion" class="form-label">
+                                    Descripción de la operación
+                                </label>
+
+                                <input
+                                    id="operacion"
+                                    type="text"
+                                    class="form-control"
+                                    maxlength="120"
+                                    placeholder="Ej. Registrar un pedido"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="d-flex flex-wrap gap-2">
+
+                                    <button
+                                        id="agregar"
+                                        type="button"
+                                        class="btn btn-bochito">
+
+                                        <i class="bi bi-plus-circle"></i>
+                                        Agregar solicitud
+                                    </button>
+
+                                    <button
+                                        id="reintentar"
+                                        type="button"
+                                        class="btn btn-secundario">
+
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                        Simular reintento
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="nota" role="status"
+                                     aria-live="polite">
+
+                                    <i class="bi bi-info-circle-fill"></i>
+
+                                    <span id="estado">
+                                        No hay solicitudes pendientes.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <h3 class="titulo-seccion">
+                                    <i class="bi bi-list-check"></i>
+                                    Solicitudes pendientes
+                                </h3>
+
+                                <ul id="listaSolicitudes"
+                                    class="lista-solicitudes">
+                                </ul>
+
+                            </div>
 
                         </div>
 
-                        <p id="estado" class="mt-3"
-                           role="status" aria-live="polite">
-                            No hay solicitudes pendientes.
-                        </p>
+                    </div>
+                </section>
 
-                        <h3 class="h5 mt-4">Solicitudes pendientes</h3>
+                <!-- Nota informativa -->
+                <div class="nota mb-4">
 
-                        <ul id="listaSolicitudes"
-                            class="lista-solicitudes">
-                        </ul>
+                    <i class="bi bi-exclamation-circle-fill"></i>
+
+                    <strong>Importante:</strong>
+                    esta demostración funciona localmente. No envía
+                    solicitudes a una API real ni garantiza la
+                    persistencia de las operaciones.
+
+                </div>
+
+                <!-- Navegación inferior -->
+                <div class="d-flex flex-wrap justify-content-between gap-2 mt-4 mb-4">
+
+                    <a class="btn btn-secundario" href="index.html">
+                        <i class="bi bi-arrow-left"></i>
+                        Volver al inicio
+                    </a>
+
+                    <div class="d-flex flex-wrap gap-2">
+
+                        <a class="btn btn-bochito" href="RNF03.html">
+                            RNF03
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF04.html"
+                           aria-current="page">
+                            RNF04
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF05.html">
+                            RNF05
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF06.html">
+                            RNF06
+                        </a>
 
                     </div>
 
-                </section>
+                </div>
 
             </div>
-
         </div>
-
-        <p class="aviso mt-3">
-            Demostración local: no envía solicitudes a una API real
-            ni garantiza la persistencia de operaciones.
-        </p>
-
     </main>
 
-    <footer class="pie text-center py-3">
-        Vochito | RNF04 - Integridad de las comunicaciones
+    <!-- Pie de página -->
+    <footer class="footer-bochito">
+        <div class="container text-center">
+            © 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.
+        </div>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript general de Bochito -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
