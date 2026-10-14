@@ -1,14 +1,14 @@
-# Vochito
-
-**Proyecto de Aplicaciones Web**
+# Vochito — Proyecto de Aplicaciones Web 2026
 
 ## Descripción del proyecto
 
-Bochito es una aplicación web desarrollada como parte de la asignatura de Aplicaciones Web. Su propósito y sus funcionalidades se describen en los apartados de este documento, de acuerdo con los requisitos establecidos para el proyecto.
+Vochito es un proyecto académico desarrollado para la asignatura de Aplicaciones Web. Su finalidad es construir un sitio web organizado mediante diferentes páginas, utilizando tecnologías web y herramientas de control de versiones.
 
-## Objetivo
+El proyecto contempla páginas informativas, catálogo, gestión de pedidos, funcionalidades relacionadas con la atención al usuario y documentación de requerimientos no funcionales.
 
-Desarrollar una aplicación web que cumpla con los requerimientos funcionales y no funcionales definidos para el proyecto, aplicando tecnologías de desarrollo web y buenas prácticas de organización, diseño, programación y trabajo colaborativo.
+## Objetivo general
+
+Desarrollar un sitio web que cumpla con los requerimientos establecidos para el proyecto Vochito, aplicando HTML5, CSS, JavaScript y Bootstrap, así como buenas prácticas de organización, diseño, accesibilidad y colaboración mediante Git y GitHub.
 
 ## Integrantes del equipo
 
@@ -18,198 +18,168 @@ Desarrollar una aplicación web que cumpla con los requerimientos funcionales y 
 - **Frontend 2:** Ortiz Salguero Geazul Guadalupe
 - **Analista:** Lorenzana Hernández Aarón Dahir
 
-## Herramientas de desarrollo
+## Tecnologías y herramientas
 
-- Visual Studio Code.
-- GitHub.
-- HTML, CSS, JavaScript y Bootstrap, según las tecnologías implementadas.
-
-## Estado del proyecto
-
-En desarrollo.
-
-## Componentes de Bootstrap utilizados
-
-En el proyecto se utilizaron diferentes componentes de Bootstrap para facilitar el diseño y la organización de la página web. Entre ellos se encuentran:
-
-- **Navbar:** utilizado para crear el menú de navegación.
-- **Container:** utilizado para organizar y centrar el contenido.
-- **Grid:** utilizado para distribuir los elementos de la página en filas y columnas.
-- **Cards:** utilizadas para presentar información de productos o servicios.
-- **Buttons:** utilizados para crear botones interactivos.
-- **Forms:** utilizados para crear formularios de contacto y captura de información.
-- **Responsive utilities:** utilizadas para adaptar el contenido a diferentes tamaños de pantalla.
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Visual Studio Code
+- Git
+- GitHub
+- Live Server
 
 ## Estructura del proyecto
 
-El proyecto está organizado de la siguiente manera:
-
 ```text
-Bochito-apps-2026/
+Vochito-apps-2026/
 │
-├── CSS/
-│   └── Archivos de estilos CSS
+├── Docs/
+│   └── Documentacion del proyecto
 │
-├── JS/
-│   └── Archivos de JavaScript
+├── css/
+│   └── Hojas de estilo CSS
 │
-├── IMG/
-│   └── Imágenes utilizadas en el proyecto
+├── img/
+│   └── Imagenes del proyecto
 │
-├── index.html
+├── js/
+│   └── Archivos JavaScript
+│
+├── inicio.html
 ├── nosotros.html
 ├── productos.html
 ├── servicios.html
 ├── contacto.html
 │
+├── iniciosesion.html
+├── catalogo.html
+├── busquedas.html
+├── pedidos.html
+├── historial.html
+├── modificacion.html
+├── cancelacion.html
+├── notificaciones.html
+├── incidencias.html
+├── ayuda.html
+├── privacidad.html
+├── evidencias.html
+│
+├── RNF03.html
+├── RNF04.html
+├── RNF05.html
+├── RNF06.html
+├── rnf.html
+├── reporte_desempeno.html
+├── tiempo_respuesta.html
+│
 └── README.md
 ```
 
-La carpeta **CSS** contiene los archivos utilizados para los estilos del sitio.
-La carpeta **JS** contiene los archivos de JavaScript.
-La carpeta **IMG** contiene las imágenes utilizadas en las diferentes páginas.
-Los archivos **HTML** corresponden a las diferentes secciones del sitio web.
-El archivo **README.md** contiene la información y documentación del proyecto.
+### Descripción de las carpetas
 
-## Instrucciones para visualizarlo
+- **Docs/**: documentación y materiales relacionados con el proyecto.
+- **css/**: hojas de estilo que definen la presentación visual de las páginas.
+- **img/**: imágenes y recursos visuales utilizados en el sitio.
+- **js/**: scripts de JavaScript para agregar interactividad.
+- **README.md**: documento que describe el proyecto, su estructura y las instrucciones para visualizarlo.
 
-Para visualizar el proyecto se deben seguir los siguientes pasos:
+### Páginas principales
 
-1. Descargar o clonar el repositorio desde GitHub.
-2. Abrir la carpeta del proyecto en **Visual Studio Code**.
-3. Abrir el archivo `index.html`.
-4. Ejecutar el proyecto utilizando **Live Server** o abrir directamente el archivo en un navegador web.
-5. Utilizar un navegador como **Google Chrome** o **Microsoft Edge**.
-6. Para comprobar el diseño responsive, se puede abrir las herramientas de desarrollador del navegador y activar la vista para dispositivos móviles.
+| Archivo | Descripción |
+|---|---|
+| `inicio.html` | Página principal del sitio. |
+| `nosotros.html` | Información general del proyecto o empresa. |
+| `productos.html` | Presentación de productos. |
+| `servicios.html` | Información sobre los servicios. |
+| `contacto.html` | Información y medios de contacto. |
+| `iniciosesion.html` | Interfaz de inicio de sesión. |
+| `catalogo.html` | Catálogo de productos. |
 
-El proyecto no requiere una instalación adicional de programas para visualizar las páginas, ya que está desarrollado con HTML, CSS, JavaScript y Bootstrap.
+### ⚙️ Páginas relacionadas con funcionalidades
 
-## Capturas de pantalla
+| Archivo | Propósito |
+|---|---|
+| `busquedas.html` | Interfaz de búsqueda. |
+| `pedidos.html` | Consulta o gestión de pedidos. |
+| `historial.html` | Consulta del historial. |
+| `modificacion.html` | Interfaz de modificación de información. |
+| `cancelacion.html` | Interfaz relacionada con cancelaciones. |
+| `notificaciones.html` | Presentación de notificaciones. |
+| `incidencias.html` | Registro o consulta de incidencias. |
+| `ayuda.html` | Información de ayuda. |
+| `privacidad.html` | Información relacionada con la privacidad. |
+| `evidencias.html` | Presentación de evidencias del proyecto. |
+| `RNF03.html` | Alta disponibilidad. |
+| `RNF04.html` | Requerimiento no funcional 04. |
+| `RNF05.html` | Requerimiento no funcional 05. |
+| `RNF06.html` | Requerimiento no funcional 06. |
+| `rnf.html` | Página general de requerimientos no funcionales. |
+| `reporte_desempeno.html` | Información relacionada con el desempeño. |
+| `tiempo_respuesta.html` | Información relacionada con el tiempo de respuesta. |
 
-## Imágenes del proyecto
+Las descripciones específicas de RNF04, RNF05 y RNF06 deben coincidir con los requisitos definidos por el equipo.
 
-![Imagen 1](img/F1.jpeg)
+## Componentes de Bootstrap
 
-![Imagen 2](img/F2.jpeg)
+El proyecto puede utilizar los siguientes componentes para mejorar la organización y presentación de las páginas:
 
-![Imagen 3](img/F3.jpeg)
+- **Navbar:** menú de navegación.
+- **Container:** organización del contenido.
+- **Grid System:** distribución en filas y columnas.
+- **Cards:** presentación de productos y servicios.
+- **Buttons:** botones de navegación y acciones.
+- **Forms:** formularios para captura de información.
+- **Responsive utilities:** adaptación a diferentes tamaños de pantalla.
 
-![Imagen 4](img/F4.png)
+##  Flujo de trabajo con Git y GitHub
 
-![Imagen 5](img/F5.png)
-
-![Imagen 6](img/F9.png)
-
-![Imagen 7](img/F11.jpeg)
-
-![Imagen 8](img/F12.jpeg)
-
-![Imagen 9](img/F13.jpeg)
-=======
-# Bochito
-
-**Proyecto de Aplicaciones Web**
-
-## Descripción del proyecto
-
-Bochito es una aplicación web desarrollada como parte de la asignatura de Aplicaciones Web. Su propósito y sus funcionalidades se describen en los apartados de este documento, de acuerdo con los requisitos establecidos para el proyecto.
-
-## Objetivo
-
-Desarrollar una aplicación web que cumpla con los requerimientos funcionales y no funcionales definidos para el proyecto, aplicando tecnologías de desarrollo web y buenas prácticas de organización, diseño, programación y trabajo colaborativo.
-
-## Integrantes del equipo
-
-- **Líder del proyecto:** Vital Millan Dayra Naomi
-- **Backend:** Guerrero López Miguel Angel
-- **Frontend 1:** Carpio Campos Rodrigo
-- **Frontend 2:** Ortiz Salguero Geazul Guadalupe
-- **Analista:** Lorenzana Hernández Aarón Dahir
-
-## Herramientas de desarrollo
-
-- Visual Studio Code.
-- GitHub.
-- HTML, CSS, JavaScript y Bootstrap, según las tecnologías implementadas.
-
-## Estado del proyecto
-
-En desarrollo.
-
-## Componentes de Bootstrap utilizados
-
-En el proyecto se utilizaron diferentes componentes de Bootstrap para facilitar el diseño y la organización de la página web. Entre ellos se encuentran:
-
-- **Navbar:** utilizado para crear el menú de navegación.
-- **Container:** utilizado para organizar y centrar el contenido.
-- **Grid:** utilizado para distribuir los elementos de la página en filas y columnas.
-- **Cards:** utilizadas para presentar información de productos o servicios.
-- **Buttons:** utilizados para crear botones interactivos.
-- **Forms:** utilizados para crear formularios de contacto y captura de información.
-- **Responsive utilities:** utilizadas para adaptar el contenido a diferentes tamaños de pantalla.
-
-## Estructura del proyecto
-
-El proyecto está organizado de la siguiente manera:
+El equipo utiliza un flujo de trabajo basado en Issues, ramas, commits y Pull Requests para organizar los cambios.
 
 ```text
-Bochito-apps-2026/
-│
-├── CSS/
-│   └── Archivos de estilos CSS
-│
-├── JS/
-│   └── Archivos de JavaScript
-│
-├── IMG/
-│   └── Imágenes utilizadas en el proyecto
-│
-├── index.html
-├── nosotros.html
-├── productos.html
-├── servicios.html
-├── contacto.html
-│
-└── README.md
+Issue
+  ↓
+Feature Branch
+  ↓
+Commits
+  ↓
+Pull Request
+  ↓
+Revisión del código
+  ↓
+Merge a main
 ```
 
-La carpeta **CSS** contiene los archivos utilizados para los estilos del sitio.
-La carpeta **JS** contiene los archivos de JavaScript.
-La carpeta **IMG** contiene las imágenes utilizadas en las diferentes páginas.
-Los archivos **HTML** corresponden a las diferentes secciones del sitio web.
-El archivo **README.md** contiene la información y documentación del proyecto.
+1. **Issue:** registrar una tarea o problema.
+2. **Feature Branch:** crear una rama independiente para desarrollar la tarea.
+3. **Commits:** guardar avances con mensajes descriptivos.
+4. **Pull Request:** solicitar la revisión de los cambios.
+5. **Revisión:** comprobar que el código cumpla con los requisitos.
+6. **Merge:** integrar los cambios aprobados en `main`.
 
-## Instrucciones para visualizarlo
+## Cómo ejecutar el proyecto
 
-Para visualizar el proyecto se deben seguir los siguientes pasos:
+1. Clonar o descargar el repositorio.
+2. Abrir la carpeta del proyecto en Visual Studio Code.
+3. Verificar que las carpetas `css/`, `img/` y `js/` estén disponibles.
+4. Abrir el archivo `inicio.html`.
+5. Ejecutarlo con la extensión Live Server.
+6. Comprobar que las páginas, imágenes, estilos y enlaces funcionen correctamente.
 
-1. Descargar o clonar el repositorio desde GitHub.
-2. Abrir la carpeta del proyecto en **Visual Studio Code**.
-3. Abrir el archivo `index.html`.
-4. Ejecutar el proyecto utilizando **Live Server** o abrir directamente el archivo en un navegador web.
-5. Utilizar un navegador como **Google Chrome** o **Microsoft Edge**.
-6. Para comprobar el diseño responsive, se puede abrir las herramientas de desarrollador del navegador y activar la vista para dispositivos móviles.
+## Buenas prácticas
 
-El proyecto no requiere una instalación adicional de programas para visualizar las páginas, ya que está desarrollado con HTML, CSS, JavaScript y Bootstrap.
+- Mantener una estructura de archivos organizada.
+- Utilizar etiquetas semánticas de HTML5.
+- Agregar atributos `alt` a las imágenes.
+- Asociar etiquetas `label` con los campos de los formularios.
+- Verificar que las rutas de los recursos sean correctas.
+- Utilizar commits descriptivos.
+- Trabajar en ramas independientes.
+- Revisar los cambios mediante Pull Requests.
+- Probar el diseño en diferentes tamaños de pantalla.
 
-## Capturas de pantalla
+##  Estado del proyecto
 
-## Imágenes del proyecto
+**Estado:** En desarrollo.
 
-![Imagen 1](img/F1.jpeg)
-
-![Imagen 2](img/F2.jpeg)
-
-![Imagen 3](img/F3.jpeg)
-
-![Imagen 4](img/F4.png)
-
-![Imagen 5](img/F5.png)
-
-![Imagen 6](img/F9.png)
-
-![Imagen 7](img/F11.jpeg)
-
-![Imagen 8](img/F12.jpeg)
-
-![Imagen 9](img/F13.jpeg)
+El equipo continúa trabajando en las páginas, los estilos, las funcionalidades y los requerimientos establecidos.
