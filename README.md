@@ -86,37 +86,37 @@ Vochito-apps-2026/
 
 ### Páginas principales
 
-| Archivo | Descripción |
-|---|---|
-| `inicio.html` | Página principal del sitio. |
-| `nosotros.html` | Información general del proyecto o empresa. |
-| `productos.html` | Presentación de productos. |
-| `servicios.html` | Información sobre los servicios. |
-| `contacto.html` | Información y medios de contacto. |
-| `iniciosesion.html` | Interfaz de inicio de sesión. |
-| `catalogo.html` | Catálogo de productos. |
+| Archivo             | Descripción                                 |
+| ------------------- | ------------------------------------------- |
+| `inicio.html`       | Página principal del sitio.                 |
+| `nosotros.html`     | Información general del proyecto o empresa. |
+| `productos.html`    | Presentación de productos.                  |
+| `servicios.html`    | Información sobre los servicios.            |
+| `contacto.html`     | Información y medios de contacto.           |
+| `iniciosesion.html` | Interfaz de inicio de sesión.               |
+| `catalogo.html`     | Catálogo de productos.                      |
 
 ### ⚙️ Páginas relacionadas con funcionalidades
 
-| Archivo | Propósito |
-|---|---|
-| `busquedas.html` | Interfaz de búsqueda. |
-| `pedidos.html` | Consulta o gestión de pedidos. |
-| `historial.html` | Consulta del historial. |
-| `modificacion.html` | Interfaz de modificación de información. |
-| `cancelacion.html` | Interfaz relacionada con cancelaciones. |
-| `notificaciones.html` | Presentación de notificaciones. |
-| `incidencias.html` | Registro o consulta de incidencias. |
-| `ayuda.html` | Información de ayuda. |
-| `privacidad.html` | Información relacionada con la privacidad. |
-| `evidencias.html` | Presentación de evidencias del proyecto. |
-| `RNF03.html` | Alta disponibilidad. |
-| `RNF04.html` | Requerimiento no funcional 04. |
-| `RNF05.html` | Requerimiento no funcional 05. |
-| `RNF06.html` | Requerimiento no funcional 06. |
-| `rnf.html` | Página general de requerimientos no funcionales. |
-| `reporte_desempeno.html` | Información relacionada con el desempeño. |
-| `tiempo_respuesta.html` | Información relacionada con el tiempo de respuesta. |
+| Archivo                  | Propósito                                           |
+| ------------------------ | --------------------------------------------------- |
+| `busquedas.html`         | Interfaz de búsqueda.                               |
+| `pedidos.html`           | Consulta o gestión de pedidos.                      |
+| `historial.html`         | Consulta del historial.                             |
+| `modificacion.html`      | Interfaz de modificación de información.            |
+| `cancelacion.html`       | Interfaz relacionada con cancelaciones.             |
+| `notificaciones.html`    | Presentación de notificaciones.                     |
+| `incidencias.html`       | Registro o consulta de incidencias.                 |
+| `ayuda.html`             | Información de ayuda.                               |
+| `privacidad.html`        | Información relacionada con la privacidad.          |
+| `evidencias.html`        | Presentación de evidencias del proyecto.            |
+| `RNF03.html`             | Alta disponibilidad.                                |
+| `RNF04.html`             | Requerimiento no funcional 04.                      |
+| `RNF05.html`             | Requerimiento no funcional 05.                      |
+| `RNF06.html`             | Requerimiento no funcional 06.                      |
+| `rnf.html`               | Página general de requerimientos no funcionales.    |
+| `reporte_desempeno.html` | Información relacionada con el desempeño.           |
+| `tiempo_respuesta.html`  | Información relacionada con el tiempo de respuesta. |
 
 Las descripciones específicas de RNF04, RNF05 y RNF06 deben coincidir con los requisitos definidos por el equipo.
 
@@ -132,7 +132,7 @@ El proyecto puede utilizar los siguientes componentes para mejorar la organizaci
 - **Forms:** formularios para captura de información.
 - **Responsive utilities:** adaptación a diferentes tamaños de pantalla.
 
-##  Flujo de trabajo con Git y GitHub
+## Flujo de trabajo con Git y GitHub
 
 El equipo utiliza un flujo de trabajo basado en Issues, ramas, commits y Pull Requests para organizar los cambios.
 
@@ -178,8 +178,28 @@ Merge a main
 - Revisar los cambios mediante Pull Requests.
 - Probar el diseño en diferentes tamaños de pantalla.
 
-##  Estado del proyecto
+## Estado del proyecto
 
 **Estado:** En desarrollo.
 
 El equipo continúa trabajando en las páginas, los estilos, las funcionalidades y los requerimientos establecidos.
+
+## Refrexiones
+
+**GEAZUL**
+Considero que nuestro equipo ha trabajado de manera positiva, ya que todos hemos colaborado para cumplir con las actividades. Una de las interacciones más difíciles fue hacer que JavaScript funcionara correctamente con los componentes de Bootstrap, porque necesitábamos comprender cómo conectar los eventos con las acciones de cada elemento. La delegación de eventos nos ayuda a organizar mejor el código y permite manejar las acciones de varios elementos desde un mismo controlador. También aprendimos que Bootstrap facilita la creación del diseño de una página web, mientras que JavaScript permite agregar funciones interactivas. Aunque en ocasiones tenemos diferentes ideas, tratamos de escucharnos y llegar a acuerdos para continuar trabajando. Además, aprendimos a identificar errores y buscar soluciones con el apoyo de nuestros compañeros. La distribución de actividades nos permitió aprovechar las habilidades de cada integrante. En general, esta práctica nos ayudó a mejorar nuestros conocimientos, nuestra comunicación y nuestra forma de trabajar en equipo.
+
+**Rodrigo**
+
+La experiencia de formar parte del grupo que me asignaron me permite aprender, convivir y trabajar en equipo. Considero que el respeto, la responsabilidad y la comunicación son importantes para lograr nuestros objetivos. Mi propósito es aportar lo mejor de mí, aprender de los demás y contribuir a un ambiente de compañerismo y colaboración.
+
+**Miguel**
+
+A pesar de no tener conocimientos previos de como utilizar javascript y trabajar en un equipo de desarrollo ya dedicado en desarrollar software, mi experiencia a sido muy buena, ya que mis compañeros de equipo estan disponibles y son accesibles a las dudas que llego a tener en el momento, junto a que tambien nos llegamos a organizar muy bien dentro de videollamadas para comentar todo lo que se necesite realizar, y lo mejor de todo siendo que todos cooperan y trabajan según a lo que el lider asigna sin quitar los aportes que hace ella
+
+**Aaron**
+
+Formar parte del equipo asignado me ha permitido aprender, convivir y colaborar de manera muy enriquecedora. Aunque al principio no contaba con conocimientos previos en JavaScript ni experiencia trabajando en un equipo dedicado al desarrollo de software, mi proceso de adaptación ha sido sumamente positivo. Considero que el respeto, la responsabilidad y la comunicación son pilares fundamentales para alcanzar nuestros objetivos, y esto se refleja claramente en la disposición de mis compañeros para resolver mis dudas y en nuestra excelente organización mediante videollamadas para planificar las tareas. Lo más destacable es el compromiso colectivo, ya que todos cumplimos con las actividades asignadas por nuestra líder, valorando también sus propias aportaciones al proyecto. Mi propósito es seguir dando lo mejor de mí, aprender de los demás y contribuir a este gran ambiente de compañerismo.
+**Naomi**
+
+Durante esta práctica, como equipo aprendimos la importancia de trabajar juntos y compartir nuestros conocimientos. La interacción más difícil fue lograr que JavaScript funcionara correctamente con los componentes de Bootstrap, ya que tuvimos que comprender cómo se relacionaban los eventos con las acciones del usuario. La delegación de eventos nos ofrece la ventaja de utilizar un solo controlador para varios elementos, lo que permite tener un código más organizado y sencillo. También aprendimos que Bootstrap facilita el diseño de páginas web mediante componentes prediseñados. Al combinar JavaScript con Bootstrap, comprendimos cómo agregar interactividad a elementos como botones, menús y formularios. Además, mejoramos nuestra capacidad para resolver errores y encontrar soluciones. La comunicación y la colaboración fueron fundamentales para completar las actividades. Finalmente, esta experiencia nos ayudó a fortalecer nuestros conocimientos y a trabajar mejor como equipo.
