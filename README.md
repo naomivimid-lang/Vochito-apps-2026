@@ -142,16 +142,16 @@ El proyecto utiliza los siguientes componentes y utilidades de Bootstrap 5.3, va
 
 Se implementaron **8 interacciones** (6 de la lista obligatoria y 2 de la libre). Todos los manejadores son **funciones con nombre** registradas con `addEventListener` (no hay atributos `onclick` en el HTML) y se usa **delegación de eventos** en `productos.js`, `pedidos.js` y `rnf04-comunicaciones.js`.
 
-| # | Interacción | Integrante responsable | Selectores usados | Eventos usados | Componente Bootstrap | Archivos |
-| - | ----------- | ---------------------- | ----------------- | -------------- | -------------------- | -------- |
-| 1 | Validación de formulario en tiempo real | Miguel | `getElementById`, `checkValidity()` | `input`, `blur` / `focusout`, `submit`, `preventDefault()` | `is-valid`, `is-invalid`, `invalid-feedback` | `iniciosesion.js`, `pedidos.js` |
-| 2 | Modal con información dinámica | Miguel | `getElementById`, `closest()` | `click` (delegado), `submit`, `dataset` (`data-id`) | Modal | `productos.js`, `pedidos.js` |
-| 3 | Notificación tras una acción | Miguel | `getElementById` | `submit`, `click` | Alert (`alert-success`, `alert-danger`, `alert-warning`) | `pedidos.js`, `productos.js`, `solicitudes.js`, `formularios.js` |
-| 4 | Filtrado y búsqueda de elementos | Miguel | `getElementById`, `querySelector` | `input`, `submit`, `reset`, `classList.toggle('d-none')` | Cards, form-control | `busquedas.js`, `productos.js` |
-| 5 | Agregar y eliminar elementos | Aarón (confirmar) | `getElementById`, `closest()` | `click` (delegado), `input`, `createElement`, `appendChild`, `remove()` | Lista con botones `btn-outline-danger` | `rnf04-comunicaciones.js` |
-| 6 | Cambio de tema claro/oscuro | Rodrigo (confirmar) | `querySelector`, `getElementById` | `change`, `classList`, `data-bs-theme` | Navbar, form-switch | `tema.js`, `tema.css` |
-| L1 | Mostrar/ocultar contraseña | Miguel | `getElementById`, `querySelector` | `click` | Input group, botón | `iniciosesion.js` |
-| L2 | Barra de progreso del formulario | Geazul (confirmar) | `getElementById`, `querySelector` | `input` (delegado), `focusout` (delegado), `reset` | Progress (`w-25`, `w-50`, `w-75`, `w-100`) | `pedidos.js`, `pedidos.html` |
+| #   | Interacción                             | Integrante responsable | Selectores usados                   | Eventos usados                                                          | Componente Bootstrap                                     | Archivos                                                         |
+| --- | --------------------------------------- | ---------------------- | ----------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------- |
+| 1   | Validación de formulario en tiempo real | Miguel                 | `getElementById`, `checkValidity()` | `input`, `blur` / `focusout`, `submit`, `preventDefault()`              | `is-valid`, `is-invalid`, `invalid-feedback`             | `iniciosesion.js`, `pedidos.js`                                  |
+| 2   | Modal con información dinámica          | Miguel                 | `getElementById`, `closest()`       | `click` (delegado), `submit`, `dataset` (`data-id`)                     | Modal                                                    | `productos.js`, `pedidos.js`                                     |
+| 3   | Notificación tras una acción            | Miguel                 | `getElementById`                    | `submit`, `click`                                                       | Alert (`alert-success`, `alert-danger`, `alert-warning`) | `pedidos.js`, `productos.js`, `solicitudes.js`, `formularios.js` |
+| 4   | Filtrado y búsqueda de elementos        | Miguel                 | `getElementById`, `querySelector`   | `input`, `submit`, `reset`, `classList.toggle('d-none')`                | Cards, form-control                                      | `busquedas.js`, `productos.js`                                   |
+| 5   | Agregar y eliminar elementos            | Aarón (confirmar)      | `getElementById`, `closest()`       | `click` (delegado), `input`, `createElement`, `appendChild`, `remove()` | Lista con botones `btn-outline-danger`                   | `rnf04-comunicaciones.js`                                        |
+| 6   | Cambio de tema claro/oscuro             | Rodrigo (confirmar)    | `querySelector`, `getElementById`   | `change`, `classList`, `data-bs-theme`                                  | Navbar, form-switch                                      | `tema.js`, `tema.css`                                            |
+| L1  | Mostrar/ocultar contraseña              | Miguel                 | `getElementById`, `querySelector`   | `click`                                                                 | Input group, botón                                       | `iniciosesion.js`                                                |
+| L2  | Barra de progreso del formulario        | Geazul (confirmar)     | `getElementById`, `querySelector`   | `input` (delegado), `focusout` (delegado), `reset`                      | Progress (`w-25`, `w-50`, `w-75`, `w-100`)               | `pedidos.js`, `pedidos.html`                                     |
 
 ### Justificación de los selectores
 
@@ -159,40 +159,6 @@ Se implementaron **8 interacciones** (6 de la lista obligatoria y 2 de la libre)
 - **`querySelector`**: para el primer elemento que coincida con una clase o atributo dentro de otro nodo (por ejemplo, el `<i>` dentro de un botón o los nodos de una tarjeta recién creada).
 - **`querySelectorAll`**: cuando hay varios elementos y se necesitan todos (por ejemplo, todos los formularios con la clase `needs-validation`).
 - **`closest()`**: dentro de la delegación de eventos, para subir desde el elemento pulsado hasta el botón que tiene `data-id`.
-
-### Capturas de pantalla
-
-Cada captura se guarda en `img/capturas/` y se muestra aquí.
-
-<!-- Para agregar una captura, guardar la imagen en img/capturas/ y escribir debajo de su título: ![Descripción](img/capturas/nombre.png) -->
-
-#### 1. Validación en tiempo real
-_Captura pendiente._
-
-#### 2. Modal con información dinámica
-_Captura pendiente._
-
-#### 3. Notificación tras una acción
-_Captura pendiente._
-
-#### 4. Filtrado y búsqueda
-_Captura pendiente._
-
-#### 5. Agregar y eliminar elementos
-_Captura pendiente._
-
-#### 6. Cambio de tema claro/oscuro
-_Captura pendiente._
-
-#### L1. Mostrar/ocultar contraseña
-_Captura pendiente._
-
-#### L2. Barra de progreso
-_Captura pendiente._
-
-## Sitio publicado
-
-GitHub Pages: https://naomivimid-lang.github.io/Vochito-apps-2026/
 
 ## Evidencia del tablero Kanban
 
