@@ -86,7 +86,7 @@ body {
 
 .sidebar-menu li.active {
   background-color: var(--color-primary-green);
-  color: #0f382c;
+  color: #ffffff;
 }
 
 .sidebar-menu li:hover:not(.active) {
@@ -279,7 +279,7 @@ body {
 }
 
 .icon-footer-blue { background-color: #60a5fa; color: white; }
-.icon-footer-green { background-color: #4ade80; color: white; }
+.icon-footer-green { background-color: #4ade80; color: #03455b; }
 .icon-footer-orange { background-color: #fb923c; color: white; }
 
 .footer-item h4 {
