@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte de Desempeño - Bochito</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/miestilos.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark header-bochito sticky-top">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="img/logo.png"
+            alt="Logo Bochito"
+            class="rounded-circle logo-img"
+          />
+          <div>
+            <span class="fw-bold d-block lh-1">Bochito</span>
+            <small class="fs-7 opacity-75">Comercio local</small>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-house-door"></i> Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-people"></i> Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-box-seam"></i> Servicios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="reporte_desempeno.html"
+                ><i class="bi bi-bar-chart-line"></i> Reportes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-envelope"></i> Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div
+        id="carouselRep"
+        class="carousel slide mb-5 rounded shadow overflow-hidden"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-teal text-white p-5 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <span class="icon-circle icon-circle-blue"
+                ><i class="bi bi-bar-chart-line"></i
+              ></span>
+            </div>
+            <h2>Indicadores de Calidad</h2>
+            <p class="mb-0">
+              Monitoreo continuo de entregas y satisfacción en la comunidad.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="icon-circle icon-circle-blue"
+          ><i class="bi bi-bar-chart-line"></i
+        ></span>
+        <div>
+          <h1 class="text-bochito fw-bold m-0">Reporte de Desempeño</h1>
+          <p class="text-muted m-0">Métricas clave de eficiencia operativa.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-green"
+                ><i class="bi bi-truck"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">Total Entregas</h5>
+            <h2 class="display-5 text-teal fw-bold">1,248</h2>
+            <p class="text-muted mb-0">Último mes</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-blue"
+                ><i class="bi bi-bar-chart-line"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">Satisfacción</h5>
+            <h2 class="display-5 text-teal fw-bold">98.5%</h2>
+            <p class="text-muted mb-0">Calificación positiva</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-yellow"
+                ><i class="bi bi-clock-history"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">A Tiempo</h5>
+            <h2 class="display-5 text-teal fw-bold">95.2%</h2>
+            <p class="text-muted mb-0">Cumplimiento</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card p-4">
+            <h4 class="text-bochito mb-3">Solicitar Reporte</h4>
+            <form action="#" method="POST">
+              <div class="mb-3">
+                <label for="rep-email" class="form-label fw-semibold"
+                  >Correo:</label
+                >
+                <input
+                  type="email"
+                  id="rep-email"
+                  class="form-control"
+                  placeholder="correo@comercio.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="rep-notes" class="form-label fw-semibold"
+                  >Detalles:</label
+                >
+                <textarea
+                  id="rep-notes"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Rango de fechas..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-teal w-100 py-2 fw-bold">
+                Generar Reporte
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h4 class="text-bochito mb-3">Preguntas</h4>
+          <div class="accordion shadow-sm mb-4" id="accRep">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#rep1"
+                >
+                  ¿Cada cuándo se actualiza?
+                </button>
+              </h2>
+              <div
+                id="rep1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accRep"
+              >
+                <div class="accordion-body">
+                  Las métricas se sincronizan cada 24 horas al finalizar la
+                  jornada.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 text-center bg-white border">
+            <button
+              type="button"
+              class="btn btn-outline-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#repModal"
+            >
+              Ver Metodología
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="repModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-teal text-white">
+            <h5 class="modal-title">Metodología</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Basado en registros de tiempo desde la confirmación del pedido hasta
+            la entrega en domicilio.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

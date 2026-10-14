@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancelación de Pedidos - Bochito</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/miestilos.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark header-bochito sticky-top">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="img/logo.png"
+            alt="Logo Bochito"
+            class="rounded-circle logo-img"
+          />
+          <div>
+            <span class="fw-bold d-block lh-1">Bochito</span>
+            <small class="fs-7 opacity-75">Comercio local</small>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-house-door"></i> Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-people"></i> Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-box-seam"></i> Servicios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="cancelacion.html"
+                ><i class="bi bi-journal-text"></i> Pedidos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-envelope"></i> Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div
+        id="carouselCancela"
+        class="carousel slide mb-5 rounded shadow overflow-hidden"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-teal text-white p-5 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <span class="icon-circle icon-circle-blue"
+                ><i class="bi bi-arrow-counterclockwise"></i
+              ></span>
+            </div>
+            <h2>Garantía de Cancelación Segura</h2>
+            <p class="mb-0">
+              Cancela tus pedidos sin costo dentro de los primeros 10 minutos de
+              haberlos solicitado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="icon-circle icon-circle-pink"
+          ><i class="bi bi-pencil-square"></i
+        ></span>
+        <div>
+          <h1 class="text-bochito fw-bold m-0">Cancelación de Pedidos</h1>
+          <p class="text-muted m-0">
+            Gestiona la cancelación de tus pedidos activos de forma rápida.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card p-4">
+            <h4 class="text-bochito mb-3 d-flex align-items-center gap-2">
+              <span
+                class="icon-circle icon-circle-yellow"
+                style="width: 36px; height: 36px; font-size: 1rem"
+                ><i class="bi bi-exclamation-triangle"></i
+              ></span>
+              Formulario de Solicitud
+            </h4>
+            <form action="#" method="POST">
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="tu@correo.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="order-id" class="form-label fw-semibold"
+                  >Número de Pedido:</label
+                >
+                <input
+                  type="text"
+                  id="order-id"
+                  class="form-control"
+                  placeholder="Ej. #BOCH-1042"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="reason" class="form-label fw-semibold"
+                  >Motivo de cancelación:</label
+                >
+                <select id="reason" class="form-select" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="tiempo">Demora en tiempo de entrega</option>
+                  <option value="error">
+                    Error en productos seleccionados
+                  </option>
+                  <option value="cambio">Cambio de opinión</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="comments" class="form-label fw-semibold"
+                  >Comentarios:</label
+                >
+                <textarea
+                  id="comments"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Describe brevemente..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-teal w-100 py-2 fw-bold">
+                Confirmar Cancelación
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <h4 class="text-bochito mb-3 d-flex align-items-center gap-2">
+            <span
+              class="icon-circle icon-circle-blue"
+              style="width: 36px; height: 36px; font-size: 1rem"
+              ><i class="bi bi-bell"></i
+            ></span>
+            Preguntas Frecuentes
+          </h4>
+          <div class="accordion shadow-sm mb-4" id="accordionFAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  ¿Cuánto tarda el reembolso?
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFAQ"
+              >
+                <div class="accordion-body">
+                  El reembolso se procesa de 24 a 48 horas hábiles a tu método
+                  de pago original.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 text-center bg-white border">
+            <p class="mb-2 text-muted">¿Tienes dudas sobre los cargos?</p>
+            <button
+              type="button"
+              class="btn btn-outline-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#policyModal"
+            >
+              Ver Políticas de Cancelación
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-teal text-white">
+            <h5 class="modal-title">Políticas Bochito</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Las cancelaciones efectuadas antes de la preparación del producto
+            son 100% libres de penalización.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+:root {
+  --primary-dark: #124e53;
+  --primary-teal: #19827e;
+  --accent-yellow: #ffc107;
+  --bg-light: #f8f9fa;
+  --text-color: #333333;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Navbar */
+.header-bochito {
+  background-color: var(--primary-dark) !important;
+  padding: 12px 24px;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+/* Iconografía oficial en círculos pasteles */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.icon-circle-blue {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.icon-circle-yellow {
+  background-color: #fef3d6;
+  color: #b78103;
+}
+
+.icon-circle-green {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.icon-circle-pink {
+  background-color: #fde8e8;
+  color: #c62828;
+}
+
+/* Botones y Elementos */
+.btn-teal {
+  background-color: var(--primary-teal);
+  color: var(--white);
+  border: none;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.btn-teal:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.bg-teal {
+  background-color: var(--primary-teal) !important;
+}
+
+.text-bochito {
+  color: var(--primary-dark) !important;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

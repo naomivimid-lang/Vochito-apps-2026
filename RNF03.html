@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Requerimientos no funcionales del sistema Bochito.">
+    <title> Alta disponibilidad | Bochito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bochito">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="Logotipo de Bochito" class="logo">
+                <span class="brand-text"><strong>Bochito</strong><small>Comercio local</small></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link " href="index.html"><i class="bi bi-house-fill"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="RNF03.html">RNF03</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF04.html">RNF04</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF05.html">RNF05</a></li>
+                    <li class="nav-item"><a class="nav-link " href="RNF06.html">RNF06</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-acceso" href="RNF05.html"><i class="bi bi-box-arrow-in-right"></i> Acceso</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container text-center">
+            <span class="hero-etiqueta">RNF03</span>
+            <h1>Alta disponibilidad</h1>
+            <p>El sistema deberá procurar que sus servicios estén disponibles para las personas usuarias conforme al objetivo definido por el proyecto.</p>
+        </div>
+    </header>
+    <main class="container contenido">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <section class="card tarjeta mb-4">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-activity"></i></div>
+                        <h2>Objetivo del requerimiento</h2>
+                        <p>Objetivo de disponibilidad anual: 99.9%, si ese es el valor establecido en la especificación oficial del proyecto.</p>
+                        <div class="nota"><i class="bi bi-info-circle-fill"></i> El porcentaje mostrado es un objetivo de referencia, no una medición real del sistema.</div>
+                    </div>
+                </section>
+                <section class="card tarjeta">
+                    <div class="card-body">
+                        <h2 class="titulo-seccion">Acciones propuestas</h2>
+                        <div class="row g-3">
+                            
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">1</span>
+                        <div><h3>Monitoreo del servicio</h3><p>Registrar periodos de operación e interrupción para calcular la disponibilidad real.</p></div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">2</span>
+                        <div><h3>Manejo de fallos</h3><p>Definir procedimientos de recuperación y notificación cuando un servicio deje de responder.</p></div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="accion-item">
+                        <span class="accion-numero">3</span>
+                        <div><h3>Pruebas de recuperación</h3><p>Comprobar periódicamente que los servicios puedan recuperarse después de una interrupción.</p></div>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+                </section>
+                <div class="d-flex flex-wrap justify-content-between gap-2 mt-4">
+                    <a class="btn btn-secundario" href="index.html"><i class="bi bi-arrow-left"></i> Volver al inicio</a>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-bochito" href="RNF03.html">RNF03</a>
+                        <a class="btn btn-bochito" href="RNF04.html">RNF04</a>
+                        <a class="btn btn-bochito" href="RNF05.html">RNF05</a>
+                        <a class="btn btn-bochito" href="RNF06.html">RNF06</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bochito">
+        <div class="container text-center">© 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
