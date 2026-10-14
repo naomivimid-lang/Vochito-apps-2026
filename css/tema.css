@@ -1,0 +1,188 @@
+/*
+ * tema.css - Ajustes del tema oscuro (se activa con data-bs-theme="dark", ver js/tema.js).
+ * Bootstrap 5.3 ya oscurece sus propios componentes; aquí se redefinen las variables
+ * de color propias del proyecto (fondos blancos y beige) para que combinen.
+ */
+[data-bs-theme="dark"] {
+  --fondo: #11181b;
+  --blanco: #1b2428;
+  --texto: #e3eef1;
+  --crema: #11181b;
+  --beige: #243136;
+  --light-bg: #11181b;
+  --verde-claro: #1d3a37;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light {
+  background-color: var(--blanco) !important;
+}
+
+[data-bs-theme="dark"] .nota,
+[data-bs-theme="dark"] .accion-item {
+  background: #1f2a2e;
+}
+
+[data-bs-theme="dark"] .icono-tarjeta,
+[data-bs-theme="dark"] .etiqueta {
+  background: #1d3a37;
+  color: #8fd3d3;
+}
+
+[data-bs-theme="dark"] .btn-secundario {
+  background: transparent;
+  color: #8fd3d3;
+  border-color: #8fd3d3;
+}
+
+[data-bs-theme="dark"] .lista-solicitudes li {
+  background-color: var(--blanco);
+}
+
+[data-bs-theme="dark"] .table-light {
+  --bs-table-bg: var(--beige);
+  --bs-table-color: var(--texto);
+}
+
+[data-bs-theme="dark"] .introduccion p {
+  color: #a9bcc2;
+}
+
+/* Los círculos de ícono conservan su fondo claro, así que el ícono mantiene su color oscuro */
+[data-bs-theme="dark"] .icono-circulo.fondo-azul,
+[data-bs-theme="dark"] .icono-circulo.fondo-verde,
+[data-bs-theme="dark"] .icono-circulo.fondo-gris {
+  color: #03455b;
+}
+
+/* ==========================================================
+   Correcciones del tema oscuro para las hojas propias de cada página.
+   Varias reglas fijan fondos blancos/beige y letras azul oscuro (#03455b):
+   en oscuro Bootstrap aclara las letras, así que esos fondos y letras se
+   reemplazan aquí. Solo aplica con data-bs-theme="dark"; el tema claro no cambia.
+   ========================================================== */
+
+/* Superficies con fondo blanco fijo: tarjetas, paneles y acordeones */
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .tarjeta,
+[data-bs-theme="dark"] .valor,
+[data-bs-theme="dark"] .accordion-item,
+[data-bs-theme="dark"] .faq-search-box {
+  background-color: var(--blanco);
+  color: var(--texto);
+}
+
+/* Secciones con fondo beige fijo (inicio, nosotros, ayuda) */
+[data-bs-theme="dark"] .principal,
+[data-bs-theme="dark"] .acciones,
+[data-bs-theme="dark"] .presentacion,
+[data-bs-theme="dark"] .valores,
+[data-bs-theme="dark"] .support-card {
+  background-color: var(--beige);
+}
+
+/* Bloques de imagen de los productos destacados de inicio */
+[data-bs-theme="dark"] .imagen-card {
+  background: #213a44;
+  color: #8fd3d3;
+}
+[data-bs-theme="dark"] .imagen-card.verde { background: #1d3a37; }
+[data-bs-theme="dark"] .imagen-card.azul { background: #1e3440; }
+
+/* Letras azul oscuro fijas: se cambian al teal claro del tema */
+[data-bs-theme="dark"] .text-bochito {
+  color: #8fd3d3 !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+  color: #a9bcc2 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary,
+[data-bs-theme="dark"] .btn-outline-secondary {
+  color: #8fd3d3;
+  border-color: #8fd3d3;
+}
+[data-bs-theme="dark"] .btn-outline-primary:hover,
+[data-bs-theme="dark"] .btn-outline-secondary:hover {
+  background-color: #8fd3d3;
+  border-color: #8fd3d3;
+  color: #11181b;
+}
+
+/* Bootstrap no adapta btn-outline-dark al tema oscuro */
+[data-bs-theme="dark"] .btn-outline-dark {
+  color: var(--texto);
+  border-color: var(--texto);
+}
+[data-bs-theme="dark"] .btn-outline-dark:hover {
+  background-color: var(--texto);
+  color: #11181b;
+}
+
+[data-bs-theme="dark"] .accordion {
+  --bs-accordion-color: var(--texto);
+  --bs-accordion-btn-color: var(--texto);
+  --bs-accordion-active-color: #8fd3d3;
+}
+
+/* Ayuda: su hoja define colores propios en variables */
+[data-bs-theme="dark"] {
+  --color-page-bg: var(--fondo);
+  --color-content-bg: var(--blanco);
+  --color-text-main: var(--texto);
+  --color-text-muted: #a9bcc2;
+  --color-border: #2c3a3f;
+  --text-color: var(--texto); /* miestilos.css */
+}
+
+[data-bs-theme="dark"] .sidebar-menu li:hover:not(.active) {
+  background-color: var(--beige);
+}
+
+/* inicio.css y nosotros.css fijan el color de títulos y textos */
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] .descripcion,
+[data-bs-theme="dark"] .tarjeta h2,
+[data-bs-theme="dark"] .valores h2,
+[data-bs-theme="dark"] .valor h3,
+[data-bs-theme="dark"] .card-abajo strong {
+  color: var(--texto);
+}
+
+[data-bs-theme="dark"] .principal .subtitulo,
+[data-bs-theme="dark"] .presentacion .subtitulo,
+[data-bs-theme="dark"] .titulo-seccion p,
+[data-bs-theme="dark"] .categoria,
+[data-bs-theme="dark"] span.texto-verde,
+[data-bs-theme="dark"] .valor i {
+  color: #8fd3d3;
+}
+
+[data-bs-theme="dark"] .contenido-card p,
+[data-bs-theme="dark"] .icono p,
+[data-bs-theme="dark"] .beneficio p,
+[data-bs-theme="dark"] .tarjeta p,
+[data-bs-theme="dark"] .valor p {
+  color: #a9bcc2;
+}
+
+/* .text-dark de Bootstrap no cambia con el tema; aquí marca texto normal */
+[data-bs-theme="dark"] .text-dark {
+  color: var(--texto) !important;
+}
+
+/* Íconos: los círculos de fondo claro conservan su ícono oscuro; los sueltos se aclaran */
+[data-bs-theme="dark"] .icono-beneficio {
+  color: #03455b;
+}
+
+[data-bs-theme="dark"] .text-primary,
+[data-bs-theme="dark"] .nota i {
+  color: #8fd3d3 !important;
+}

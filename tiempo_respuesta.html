@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiempos de respuesta - Bochito Envíos y Ventas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/miestilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div
+        id="carouselTiempos"
+        class="carousel slide mb-5 rounded shadow overflow-hidden"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-teal text-white p-5 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <span class="icon-circle icon-circle-blue"
+                ><i class="bi bi-clock-history"></i
+              ></span>
+            </div>
+            <h2>Objetivo: 2 segundos o menos</h2>
+            <p class="mb-0">
+              Las consultas de estado y trazabilidad de pedidos a la API no deben tardar más de 2 segundos con una carga normal de operaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="icon-circle icon-circle-blue"
+          ><i class="bi bi-clock-history"></i
+        ></span>
+        <div>
+          <h1 class="text-bochito fw-bold m-0">Tiempos de Respuesta</h1>
+          <p class="text-muted m-0">
+            RNF01: objetivo de respuesta de la API por tipo de consulta.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-4 mb-5">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead
+              class="table-dark bg-primario-oscuro"
+            >
+              <tr>
+                <th>Consulta a la API</th>
+                <th>Objetivo</th>
+                <th>Medición</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="icon-circle icon-circle-blue circulo-36-chico"
+                      ><i class="bi bi-arrow-repeat"></i
+                    ></span>
+                    Estatus de un pedido
+                  </div>
+                </td>
+                <td>2 segundos o menos</td>
+                <td><span class="badge text-bg-secondary">Por medir</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="icon-circle icon-circle-green circulo-36-chico"
+                      ><i class="bi bi-truck"></i
+                    ></span>
+                    Trazabilidad (etapas del pedido)
+                  </div>
+                </td>
+                <td>2 segundos o menos</td>
+                <td><span class="badge text-bg-secondary">Por medir</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <span
+                      class="icon-circle icon-circle-yellow circulo-36-chico"
+                      ><i class="bi bi-geo-alt"></i
+                    ></span>
+                    Búsqueda por PO, fechas o estatus
+                  </div>
+                </td>
+                <td>2 segundos o menos</td>
+                <td><span class="badge text-bg-secondary">Por medir</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card p-4">
+            <h4 class="text-bochito mb-3">¿Tu pedido se retrasó?</h4>
+            <p class="text-muted">
+              Los retrasos de un pedido se registran como incidencia, con su causa y la
+              nueva fecha estimada (RF05).
+            </p>
+            <a class="btn btn-teal w-100 py-2 fw-bold" href="incidencias.html">Registrar incidencia</a>
+            <a class="btn btn-outline-dark w-100 mt-2" href="rnf.html">Volver a requerimientos no funcionales</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h4 class="text-bochito mb-3">Preguntas sobre Tiempos</h4>
+          <div class="accordion shadow-sm mb-4" id="accTime">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#t1"
+                >
+                  ¿Qué hago si mi pedido se retrasa?
+                </button>
+              </h2>
+              <div
+                id="t1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accTime"
+              >
+                <div class="accordion-body">
+                  Registra una incidencia con su causa y la nueva fecha estimada; el cliente recibirá una notificación.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 text-center bg-white border">
+            <button
+              type="button"
+              class="btn btn-outline-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#timeModal"
+            >
+              Ver Estándares de Servicio
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="timeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-teal text-white">
+            <h5 class="modal-title">Estándares</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            El objetivo de 2 segundos aplica a las consultas a la API con una carga normal de operaciones. Son objetivos, no mediciones reales del sistema.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

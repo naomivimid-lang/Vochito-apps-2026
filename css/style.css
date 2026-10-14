@@ -1,0 +1,79 @@
+/* Estilo compartido de Bochito */
+:root {
+    --azul-oscuro: #03455b;
+    --verde-azulado: #187171;
+    --amarillo: #f2a900;
+    --fondo: #f4f8f9;
+    --texto: #263238;
+    --blanco: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+body {
+    margin: 0; background: var(--fondo); color: var(--texto);
+    font-family: "Roboto Flex", sans-serif;
+}
+.hero { background: var(--verde-azulado); color: white; padding: 55px 15px; }
+.hero h1 { font-size: 40px; font-weight: bold; margin: 10px 0 12px; }
+.hero p { font-size: 18px; max-width: 850px; margin: 0 auto; }
+.hero-etiqueta {
+    display: inline-block; border: 1px solid rgba(255,255,255,.65);
+    border-radius: 20px; padding: 5px 14px; font-weight: bold;
+}
+.contenido { padding-top: 40px; padding-bottom: 55px; }
+.introduccion { margin-bottom: 30px; }
+.introduccion h2, .tarjeta h2 { font-size: 27px; font-weight: bold; }
+.introduccion p { color: #64747a; max-width: 650px; margin: 10px auto 0; }
+.tarjeta {
+    border: none; border-radius: 14px; background: var(--blanco);
+    box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+.tarjeta .card-body { padding: 27px; }
+.icono-tarjeta {
+    width: 55px; height: 55px; border-radius: 12px;
+    background: #e5f2f2; color: var(--azul-oscuro);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 27px; margin-bottom: 18px;
+}
+.etiqueta {
+    display: inline-block; background: #e5f2f2; color: var(--azul-oscuro);
+    padding: 5px 12px; border-radius: 20px; font-size: 12px;
+    font-weight: bold; margin-bottom: 10px;
+}
+.tarjeta h2 { font-size: 23px; margin-bottom: 12px; }
+.tarjeta h3 { font-size: 18px; font-weight: bold; margin-bottom: 6px; }
+.tarjeta p { font-size: 15px; line-height: 1.7; }
+.btn-bochito {
+    background: var(--azul-oscuro); color: white; border-radius: 25px;
+    padding: 11px 18px; font-weight: bold;
+}
+.card .btn-bochito { width: 100%; }
+.btn-bochito:hover, .btn-bochito:focus { background: var(--verde-azulado); color: white; }
+.btn-secundario {
+    border: 1px solid var(--azul-oscuro); color: var(--azul-oscuro);
+    background: white; border-radius: 25px; padding: 10px 18px;
+}
+.btn-secundario:hover { background: #e5f2f2; color: var(--azul-oscuro); }
+.nota {
+    padding: 16px; background: #f3f7f8; border-radius: 10px;
+    border-left: 4px solid var(--amarillo); font-size: 14px; line-height: 1.7;
+}
+.nota i { color: var(--azul-oscuro); margin-right: 5px; }
+.accion-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: #f7f9fa; border-radius: 10px; padding: 17px;
+}
+.accion-numero {
+    flex: 0 0 32px; height: 32px; display: flex; align-items: center;
+    justify-content: center; border-radius: 50%; color: white;
+    background: var(--verde-azulado); font-weight: bold;
+}
+.accion-item p { margin-bottom: 0; }
+.titulo-seccion { margin-bottom: 20px !important; }
+@media (max-width: 576px) {
+    .hero { padding: 40px 15px; }
+    .hero h1 { font-size: 29px; }
+    .hero p { font-size: 16px; }
+    .introduccion h2, .tarjeta h2 { font-size: 23px; }
+    .tarjeta .card-body { padding: 22px; }
+}

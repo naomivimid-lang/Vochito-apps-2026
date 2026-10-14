@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RNF04: Integridad de las comunicaciones del sistema Bochito.">
+
+    <title>Tolerancia a fallos - Bochito Envíos y Ventas</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Estilos de Bochito -->
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript del simulador -->
+    <script src="js/rnf04-comunicaciones.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+  </head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <header class="hero">
+        <div class="container text-center">
+
+            <span class="hero-etiqueta">RNF04</span>
+
+            <h1>Tolerancia a fallos (resiliencia)</h1>
+
+            <p>
+                Si se pierde la comunicación con las APIs de las empresas transportistas,
+                el sistema encola las peticiones y las reintenta automáticamente sin perder datos.
+            </p>
+
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container contenido">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-lg-9">
+
+                <!-- Tarjeta del objetivo -->
+                <section class="card tarjeta mb-4">
+
+                    <div class="card-body">
+
+                        <div class="icono-tarjeta">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+
+                        <h2>Objetivo del requerimiento</h2>
+
+                        <p>
+                            Encolar las peticiones a las APIs de transportistas cuando falle la comunicación
+                            (con herramientas como Kafka o RabbitMQ) y reintentar la sincronización de
+                            estados automáticamente, sin pérdida de datos.
+                        </p>
+
+                        <div class="nota">
+                            <i class="bi bi-info-circle-fill"></i>
+                            Esta página contiene una demostración local
+                            del mecanismo de reintento. No representa una
+                            conexión con un servidor real.
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Tarjeta del simulador -->
+                <section class="card tarjeta mb-4">
+
+                    <div class="card-body">
+
+                        <h2 class="titulo-seccion">
+                            Simulador de solicitudes
+                        </h2>
+
+                        <p>
+                            Agrega una operación y utiliza el botón de
+                            reintento para simular el procesamiento de
+                            solicitudes pendientes.
+                        </p>
+
+                        <div class="row g-3">
+
+                            <!-- Columna responsiva -->
+                            <div class="col-12 col-md-6 col-lg-4">
+
+                                <label for="operacion" class="form-label">
+                                    Descripción de la operación
+                                </label>
+
+                                <input
+                                    id="operacion"
+                                    type="text"
+                                    class="form-control"
+                                    maxlength="120"
+                                    placeholder="Ej. Registrar un pedido"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="d-flex flex-wrap gap-2">
+
+                                    <button
+                                        id="agregar"
+                                        type="button"
+                                        class="btn btn-bochito">
+
+                                        <i class="bi bi-plus-circle"></i>
+                                        Agregar solicitud
+                                    </button>
+
+                                    <button
+                                        id="reintentar"
+                                        type="button"
+                                        class="btn btn-secundario">
+
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                        Simular reintento
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="nota" role="status"
+                                     aria-live="polite">
+
+                                    <i class="bi bi-info-circle-fill"></i>
+
+                                    <span id="estado">
+                                        No hay solicitudes pendientes.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <h3 class="titulo-seccion">
+                                    <i class="bi bi-list-check"></i>
+                                    Solicitudes pendientes
+                                </h3>
+
+                                <ul id="listaSolicitudes"
+                                    class="lista-solicitudes">
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Nota informativa -->
+                <div class="nota mb-4">
+
+                    <i class="bi bi-exclamation-circle-fill"></i>
+
+                    <strong>Importante:</strong>
+                    esta demostración funciona localmente. No envía
+                    solicitudes a una API real ni garantiza la
+                    persistencia de las operaciones.
+
+                </div>
+
+                <!-- Navegación inferior -->
+                <div class="d-flex flex-wrap justify-content-between gap-2 mt-4 mb-4">
+
+                    <a class="btn btn-secundario" href="rnf.html">
+                        <i class="bi bi-arrow-left"></i>
+                        Volver a requerimientos
+                    </a>
+
+                    <div class="d-flex flex-wrap gap-2">
+
+                        <a class="btn btn-bochito" href="tiempo_respuesta.html">RNF01</a>
+
+                        <a class="btn btn-bochito" href="RNF03.html">
+                            RNF03
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF04.html"
+                           aria-current="page">
+                            RNF04
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF05.html">
+                            RNF05
+                        </a>
+
+                        <a class="btn btn-bochito" href="RNF06.html">
+                            RNF06
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript general de Bochito -->
+
+</body>
+</html>

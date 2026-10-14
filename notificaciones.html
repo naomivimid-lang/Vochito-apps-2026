@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notificaciones - Bochito Envíos y Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container py-3">
+            <h1 class="display-4 fw-bold">Centro de Notificaciones</h1>
+            <p class="lead">Avisos en la página cuando cambia el estatus de tu pedido o se registra una incidencia.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="list-group shadow-sm">
+            <!-- shortcut: avisos de ejemplo; el backend los generará al cambiar el estatus o registrar una incidencia -->
+            <div class="list-group-item border-0 mb-2 rounded p-3 d-flex gap-3 align-items-center bg-light">
+                <div class="text-success fs-3"><i class="fa-solid fa-circle-check"></i></div>
+                <div>
+                    <h2 class="h5 mb-1 fw-bold">Pedido entregado</h2>
+                    <p class="mb-1 text-muted">Tu pedido PO-2026-0005 fue entregado.</p>
+                    <small class="text-secondary">Hace 10 minutos</small>
+                </div>
+            </div>
+            <div class="list-group-item border-0 mb-2 rounded p-3 d-flex gap-3 align-items-center bg-light">
+                <div class="text-primary fs-3"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div>
+                    <h2 class="h5 mb-1 fw-bold">Cambio de estatus</h2>
+                    <p class="mb-1 text-muted">Tu pedido PO-2026-0003 pasó a "Control de calidad".</p>
+                    <small class="text-secondary">Hace 2 horas</small>
+                </div>
+            </div>
+            <div class="list-group-item border-0 mb-2 rounded p-3 d-flex gap-3 align-items-center bg-light">
+                <div class="text-warning fs-3"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div>
+                    <h2 class="h5 mb-1 fw-bold">Incidencia registrada</h2>
+                    <p class="mb-1 text-muted">Tu pedido PO-2026-0002 tiene un retraso por falta de materia prima. Nueva fecha estimada: 20 oct 2026.</p>
+                    <small class="text-secondary">Ayer</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

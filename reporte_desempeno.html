@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reporte de desempeño - Bochito Envíos y Ventas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/miestilos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div
+        id="carouselRep"
+        class="carousel slide mb-5 rounded shadow overflow-hidden"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active bg-teal text-white p-5 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <span class="icon-circle icon-circle-blue"
+                ><i class="bi bi-bar-chart-line"></i
+              ></span>
+            </div>
+            <h2>Indicadores de Calidad</h2>
+            <p class="mb-0">
+              Pedidos entregados a tiempo, retrasados y cancelados en el rango de fechas que elijas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <span class="icon-circle icon-circle-blue"
+          ><i class="bi bi-bar-chart-line"></i
+        ></span>
+        <div>
+          <h1 class="text-bochito fw-bold m-0">Reporte de Desempeño</h1>
+          <p class="text-muted m-0">Resultados del periodo seleccionado (datos de ejemplo).</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-green"
+                ><i class="bi bi-truck"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">Entregados a tiempo</h5>
+            <h2 class="display-5 text-teal fw-bold">1,180</h2>
+            <p class="text-muted mb-0">Pedidos</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-yellow"
+                ><i class="bi bi-hourglass-split"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">Retrasados</h5>
+            <h2 class="display-5 text-teal fw-bold">52</h2>
+            <p class="text-muted mb-0">Pedidos</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon-circle icon-circle-pink"
+                ><i class="bi bi-x-circle"></i
+              ></span>
+            </div>
+            <h5 class="text-bochito">Cancelados</h5>
+            <h2 class="display-5 text-teal fw-bold">16</h2>
+            <p class="text-muted mb-0">Pedidos</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card p-4">
+            <h4 class="text-bochito mb-3">Generar reporte</h4>
+            <form class="needs-validation" novalidate data-exito="Reporte generado. En el prototipo se muestran datos de ejemplo; el backend calculará las cifras del rango elegido.">
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="rep-desde" class="form-label fw-semibold">Desde:</label>
+                  <input type="date" id="rep-desde" class="form-control" data-desde required />
+                  <div class="invalid-feedback">Elige la fecha inicial.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="rep-hasta" class="form-label fw-semibold">Hasta:</label>
+                  <input type="date" id="rep-hasta" class="form-control" data-hasta required />
+                  <div class="invalid-feedback">Elige una fecha final igual o posterior a la inicial.</div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-teal w-100 py-2 fw-bold">
+                Generar reporte
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h4 class="text-bochito mb-3">Preguntas</h4>
+          <div class="accordion shadow-sm mb-4" id="accRep">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#rep1"
+                >
+                  ¿Cada cuándo se actualiza?
+                </button>
+              </h2>
+              <div
+                id="rep1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accRep"
+              >
+                <div class="accordion-body">
+                  Las métricas se sincronizan cada 24 horas al finalizar la
+                  jornada.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-3 text-center bg-white border">
+            <button
+              type="button"
+              class="btn btn-outline-dark btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#repModal"
+            >
+              Ver Metodología
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="repModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-teal text-white">
+            <h5 class="modal-title">Metodología</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Basado en registros de tiempo desde la confirmación del pedido hasta
+            la entrega en domicilio.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/formularios.js"></script>
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

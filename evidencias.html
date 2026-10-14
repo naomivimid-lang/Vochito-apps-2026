@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evidencia de entrega - Bochito Envíos y Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container py-3">
+            <h1 class="display-4 fw-bold">Evidencia de Entrega</h1>
+            <p class="lead">Registra quién recibió el pedido, la fecha, la hora y la fotografía de la entrega.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 p-4">
+                    <form class="needs-validation" novalidate data-exito="Evidencia registrada en el expediente del pedido.">
+                        <div class="mb-3">
+                            <label for="idPedidoEvidencia" class="form-label fw-bold">Orden de compra (PO) <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="idPedidoEvidencia" placeholder="Ej. PO-2026-0001" pattern="[Pp][Oo]-[0-9]{4}-[0-9]{4}" required>
+                            <div class="invalid-feedback">Escribe la orden de compra con el formato PO-2026-0001.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recibe" class="form-label fw-bold">Nombre de quien recibe <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="recibe" minlength="3" required>
+                            <div class="invalid-feedback">Escribe el nombre de quien recibió el pedido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaEntrega" class="form-label fw-bold">Fecha y hora de entrega <span class="text-danger">*</span></label>
+                            <input type="datetime-local" class="form-control" id="fechaEntrega" required>
+                            <div class="invalid-feedback">Elige la fecha y hora de la entrega.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fotoEntrega" class="form-label fw-bold">Fotografía de la entrega <span class="text-danger">*</span></label>
+                            <input class="form-control" type="file" id="fotoEntrega" accept="image/*" required>
+                            <div class="invalid-feedback">Agrega la fotografía de la entrega.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comentarios" class="form-label fw-bold">Comentarios adicionales</label>
+                            <textarea class="form-control" id="comentarios" rows="3" placeholder="Referencias del domicilio, observaciones, etc."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 mt-3"><i class="fa-solid fa-cloud-arrow-up"></i> Registrar evidencia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/formularios.js"></script>
+</body>
+</html>

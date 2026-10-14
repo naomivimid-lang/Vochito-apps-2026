@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Requerimientos no funcionales del sistema Bochito.">
+    <title>Requerimientos no funcionales - Bochito Envíos y Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/tema.css">
+    <script src="js/tema.js"></script>
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+          <img src="img/logo.png" alt="Logo Bochito Envíos y Ventas" width="60" height="60" class="rounded-circle d-inline-block align-text-top" />
+          <div class="d-flex flex-column lh-sm">
+            <span><i class="fa-solid fa-leaf"></i> Bochito</span>
+            <small>Comercio local</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html"><i class="fa-solid fa-store"></i> Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-basket-shopping"></i> Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="busquedas.html"><i class="fa-solid fa-magnifying-glass"></i> Búsquedas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-clipboard-list"></i> Pedidos</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="pedidos.html"><i class="fa-solid fa-file-circle-plus fa-fw"></i> Registrar pedido</a></li>
+                <li><a class="dropdown-item" href="productos.html"><i class="fa-solid fa-list-check fa-fw"></i> Estatus y búsqueda</a></li>
+                <li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left fa-fw"></i> Historial</a></li>
+                <li><a class="dropdown-item" href="notificaciones.html"><i class="fa-solid fa-bell fa-fw"></i> Notificaciones</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="incidencias.html"><i class="fa-solid fa-triangle-exclamation fa-fw"></i> Registrar incidencia</a></li>
+                <li><a class="dropdown-item" href="evidencias.html"><i class="fa-solid fa-camera fa-fw"></i> Evidencia de entrega</a></li>
+                <li><a class="dropdown-item" href="cancelacion.html"><i class="fa-solid fa-ban fa-fw"></i> Cancelar pedido</a></li>
+                <li><a class="dropdown-item" href="modificacion.html"><i class="fa-solid fa-pen-to-square fa-fw"></i> Modificar pedido</a></li>
+                <li><a class="dropdown-item" href="reporte_desempeno.html"><i class="fa-solid fa-chart-column fa-fw"></i> Reporte de desempeño</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-secondary-custom" href="iniciosesion.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="container text-center">
+            <h1>Requerimientos no funcionales</h1>
+            <p>Bochito: calidad, seguridad y disponibilidad para el comercio local.</p>
+        </div>
+    </header>
+    <main class="container contenido">
+        <section class="text-center introduccion">
+            <h2>Administración del sistema</h2>
+            <p>Selecciona un requerimiento para consultar su objetivo y las acciones propuestas.</p>
+        </section>
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <article class="card tarjeta h-100">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-stopwatch"></i></div>
+                        <span class="etiqueta">RNF01</span>
+                        <h2>Tiempos de respuesta</h2>
+                        <p>Las consultas de estado y trazabilidad de pedidos deben responder en 2 segundos o menos con carga normal.</p>
+                        <a class="btn btn-bochito" href="tiempo_respuesta.html">Ver requerimiento <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="card tarjeta h-100">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-activity"></i></div>
+                        <span class="etiqueta">RNF03</span>
+                        <h2>Alta disponibilidad</h2>
+                        <p>El sistema busca mantener sus servicios disponibles y recuperarse ante interrupciones.</p>
+                        <a class="btn btn-bochito" href="RNF03.html">Ver requerimiento <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="card tarjeta h-100">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-arrow-repeat"></i></div>
+                        <span class="etiqueta">RNF04</span>
+                        <h2>Tolerancia a fallos</h2>
+                        <p>Si se pierde la comunicación con las APIs de transportistas, las peticiones se encolan y se reintentan sin perder datos.</p>
+                        <a class="btn btn-bochito" href="RNF04.html">Ver requerimiento <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="card tarjeta h-100">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-lock-fill"></i></div>
+                        <span class="etiqueta">RNF05</span>
+                        <h2>Cifrado en tránsito y en reposo</h2>
+                        <p>La información sensible viaja cifrada con TLS 1.3 y la base de datos se cifra con AES-256.</p>
+                        <a class="btn btn-bochito" href="RNF05.html">Ver requerimiento <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="card tarjeta h-100">
+                    <div class="card-body">
+                        <div class="icono-tarjeta"><i class="bi bi-key-fill"></i></div>
+                        <span class="etiqueta">RNF06</span>
+                        <h2>Políticas de contraseñas y accesos</h2>
+                        <p>Contraseñas de mínimo 12 caracteres con letras, números y símbolos, y bloqueo tras 5 intentos fallidos.</p>
+                        <a class="btn btn-bochito" href="RNF06.html">Ver requerimiento <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        <div class="nota mt-4"><i class="bi bi-info-circle-fill"></i>
+            <strong>Importante:</strong> esta interfaz presenta objetivos y propuestas. No demuestra por sí sola
+            que la disponibilidad, el rendimiento o la seguridad se hayan medido o verificado. Los requerimientos RNF02 y RNF07 a RNF10 del ERS aún no tienen página.
+        </div>
+    </main>
+
+    <footer class="bg-custom-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="small mb-2">
+          <a class="link-light" href="ayuda.html">Ayuda</a> ·
+          <a class="link-light" href="privacidad.html">Privacidad</a> ·
+          <a class="link-light" href="rnf.html">Requerimientos no funcionales</a>
+        </p>
+        <p class="mb-0 small">&copy; 2026 Bochito - Envíos y Ventas. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
