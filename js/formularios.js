@@ -5,6 +5,7 @@
  * Uso: <form class="needs-validation" novalidate data-exito="Texto del aviso">
  */
 // shortcut: los datos no se guardan; conectar cada formulario a su API cuando exista el backend
+// querySelectorAll: hay varios formularios con la misma clase y queremos todos (devuelve una lista).
 document.querySelectorAll("form.needs-validation").forEach((form) => {
   const aviso = document.createElement("div");
   aviso.className = "alert alert-success mt-3 mb-0 d-none";
@@ -12,11 +13,18 @@ document.querySelectorAll("form.needs-validation").forEach((form) => {
   form.after(aviso);
 
   // Rango de fechas: "hasta" no puede ser anterior a "desde"
+  // querySelector: se busca por atributo data-* dentro de este formulario (no tienen id) y solo se necesita el primero.
   const desde = form.querySelector("[data-desde]");
   const hasta = form.querySelector("[data-hasta]");
-  if (desde && hasta) desde.addEventListener("change", () => (hasta.min = desde.value));
 
-  form.addEventListener("submit", (e) => {
+  /** Evento change: la fecha "hasta" no puede ser anterior a "desde". */
+  function ajustarFechaMinima() {
+    hasta.min = desde.value;
+  }
+  if (desde && hasta) desde.addEventListener("change", ajustarFechaMinima);
+
+  /** Evento submit: valida con las reglas del HTML y muestra el aviso de éxito. */
+  function alEnviarFormulario(e) {
     e.preventDefault();
     form.classList.add("was-validated");
     aviso.classList.add("d-none");
@@ -26,5 +34,6 @@ document.querySelectorAll("form.needs-validation").forEach((form) => {
     aviso.classList.remove("d-none");
     form.reset();
     form.classList.remove("was-validated");
-  });
+  }
+  form.addEventListener("submit", alEnviarFormulario);
 });

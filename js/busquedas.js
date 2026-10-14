@@ -5,6 +5,7 @@
  * Endpoint equivalente: GET /api/productos?q=...&categoria=...&precioMax=...
  */
 // PRODUCTOS, ICONOS y tarjeta() vienen de js/productos-locales.js
+// getElementById: cada elemento tiene un id único; es el método más directo y rápido para un solo nodo.
 const form = document.getElementById("formBusqueda");
 const selCategoria = document.getElementById("categoria");
 const precioMax = document.getElementById("precioMax");
@@ -38,8 +39,24 @@ function buscar() {
   sinResultados.classList.toggle("d-none", lista.length > 0);
 }
 
-form.addEventListener("submit", (e) => { e.preventDefault(); buscar(); });
-// "Limpiar" restablece los campos y vuelve a mostrar todos los productos
-form.addEventListener("reset", () => setTimeout(buscar, 0));
+/** Evento submit: evita recargar la página y aplica los filtros. */
+function alEnviarBusqueda(e) {
+  e.preventDefault();
+  buscar();
+}
+
+/** Evento reset: "Limpiar" restablece los campos y vuelve a mostrar todos los productos. */
+function alLimpiarBusqueda() {
+  setTimeout(buscar, 0); // esperar a que el navegador vacíe los campos
+}
+
+/** Evento input: filtra mientras se escribe (búsqueda en tiempo real). */
+function alEscribirBusqueda() {
+  buscar();
+}
+
+form.addEventListener("submit", alEnviarBusqueda);
+form.addEventListener("reset", alLimpiarBusqueda);
+form.addEventListener("input", alEscribirBusqueda);
 
 buscar();

@@ -4,6 +4,7 @@
  * Usa Bochito (js/datos.js). Endpoint equivalente: POST /api/pedidos/:po/solicitudes
  * Uso: <form id="formSolicitud" data-accion="cancelar"> y <div id="avisoSolicitud">
  */
+// getElementById: formulario y aviso tienen id único, así que no hace falta un selector CSS.
 const formSolicitud = document.getElementById("formSolicitud");
 const avisoSolicitud = document.getElementById("avisoSolicitud");
 const EMBARCADO = "En tránsito";
@@ -13,7 +14,8 @@ function avisar(texto, tipo) {
   avisoSolicitud.className = `alert alert-${tipo} mt-3 mb-0`;
 }
 
-formSolicitud.addEventListener("submit", (e) => {
+/** Evento submit: valida el formulario y revisa el estatus del pedido. */
+function alEnviarSolicitud(e) {
   e.preventDefault();
   formSolicitud.classList.add("was-validated");
   avisoSolicitud.className = "d-none"; // no dejar visible el aviso del intento anterior
@@ -31,4 +33,6 @@ formSolicitud.addEventListener("submit", (e) => {
   avisar(`Solicitud para ${accion} el pedido ${po} registrada. Estatus actual: "${pedido.estatus}".`, "success");
   formSolicitud.reset();
   formSolicitud.classList.remove("was-validated");
-});
+}
+
+formSolicitud.addEventListener("submit", alEnviarSolicitud);

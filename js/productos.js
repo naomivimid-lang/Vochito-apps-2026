@@ -9,6 +9,7 @@ if (sesion) Bochito.activarBarraSesion(sesion);
 const ESTADOS = Bochito.ESTADOS;
 let pedidos = Bochito.getPedidos();
 
+// getElementById: tabla, filtros y modal tienen id único.
 const tabla = document.getElementById("tablaPedidos");
 const sinPedidos = document.getElementById("sinPedidos");
 const filtro = document.getElementById("filtroEstatus");
@@ -55,6 +56,7 @@ function mostrarMensaje(texto, tipo) {
 }
 
 function dibujarTabla() {
+  // Los filtros se leen en cada llamada para usar siempre el valor actual del campo.
   const po = document.getElementById("filtroPo").value.trim().toLowerCase();
   const desde = document.getElementById("filtroDesde").value;
   const hastaEl = document.getElementById("filtroHasta");
@@ -94,7 +96,9 @@ function llenarSelects() {
   });
 }
 
-tabla.addEventListener("click", (e) => {
+/** Evento click (delegado en la tabla): un solo listener atiende todos los botones "Actualizar estatus".
+ *  closest() sube desde el elemento pulsado (puede ser el texto del botón) hasta el botón con data-id. */
+function alClicTabla(e) {
   const btn = e.target.closest("button[data-id]");
   if (!btn) return;
   pedidoActual = pedidos.find((p) => p.id === Number(btn.dataset.id));
@@ -102,9 +106,10 @@ tabla.addEventListener("click", (e) => {
   selectNuevo.value = pedidoActual.estatus;
   modalError.classList.add("d-none");
   modal.show();
-});
+}
 
-formEstatus.addEventListener("submit", async (e) => {
+/** Evento submit del modal: valida el estatus y lo actualiza (simulación de API). */
+async function alEnviarEstatus(e) {
   e.preventDefault();
   const nuevo = selectNuevo.value;
   if (!ESTADOS.includes(nuevo)) {
@@ -124,8 +129,11 @@ formEstatus.addEventListener("submit", async (e) => {
     modalError.textContent = body.mensaje || `Error inesperado (${status}).`;
     modalError.classList.remove("d-none");
   }
-});
+}
 
+tabla.addEventListener("click", alClicTabla);
+formEstatus.addEventListener("submit", alEnviarEstatus);
+// Evento input delegado: un solo listener en el contenedor #filtros cubre los tres filtros
 document.getElementById("filtros").addEventListener("input", dibujarTabla);
 
 llenarSelects();

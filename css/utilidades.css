@@ -1,0 +1,23 @@
+/* utilidades.css - Clases que reemplazan los estilos en línea (style="...") del proyecto */
+
+/* Ancho 0 para la barra de progreso del formulario de pedidos (Bootstrap solo trae w-25, w-50, w-75, w-100) */
+.w-0 { width: 0; }
+
+/* Círculos numerados */
+.circulo-36 { width: 36px; height: 36px; font-size: 1rem; }
+.circulo-36-chico { width: 36px; height: 36px; font-size: 0.9rem; }
+
+/* Círculos con ícono (tarjetas de servicios, privacidad y productos) */
+.icono-circulo { width: 56px; height: 56px; }
+.fondo-azul { background-color: #d6eaf0; }
+.fondo-verde { background-color: #cde8e4; }
+.fondo-gris { background-color: #e3eef1; }
+.icono-azul-oscuro { color: #03455b; }
+.texto-verde { color: #187171; }
+
+/* Fondos con las variables de color del proyecto */
+.bg-secundario { background-color: var(--secondary-color); }
+.bg-primario-oscuro { background-color: var(--primary-dark); }
+
+/* Que el menú fijo no tape el título de la sección del catálogo al saltar a ella */
+.seccion-catalogo { scroll-margin-top: 100px; }

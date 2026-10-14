@@ -46,7 +46,7 @@ Vochito-apps-2026/
 ├── js/
 │   └── Archivos JavaScript
 │
-├── inicio.html
+├── index.html
 ├── nosotros.html
 ├── productos.html
 ├── servicios.html
@@ -79,16 +79,16 @@ Vochito-apps-2026/
 ### Descripción de las carpetas
 
 - **Docs/**: documentación y materiales relacionados con el proyecto.
-- **css/**: hojas de estilo que definen la presentación visual de las páginas.
+- **css/**: hojas de estilo que definen la presentación visual de las páginas (`tema.css` ajusta el tema oscuro y `utilidades.css` reemplaza los estilos en línea).
 - **img/**: imágenes y recursos visuales utilizados en el sitio.
-- **js/**: scripts de JavaScript para agregar interactividad.
+- **js/**: scripts de JavaScript para agregar interactividad (un archivo por funcionalidad; `tema.js` se carga en todas las páginas).
 - **README.md**: documento que describe el proyecto, su estructura y las instrucciones para visualizarlo.
 
 ### Páginas principales
 
 | Archivo             | Descripción                                 |
 | ------------------- | ------------------------------------------- |
-| `inicio.html`       | Página principal del sitio.                 |
+| `index.html`        | Página principal del sitio.                 |
 | `nosotros.html`     | Información general del proyecto o empresa. |
 | `productos.html`    | Presentación de productos.                  |
 | `servicios.html`    | Información sobre los servicios.            |
@@ -122,7 +122,7 @@ Las descripciones específicas de RNF04, RNF05 y RNF06 deben coincidir con los r
 
 ## Componentes de Bootstrap
 
-El proyecto puede utilizar los siguientes componentes para mejorar la organización y presentación de las páginas:
+El proyecto utiliza los siguientes componentes y utilidades de Bootstrap 5.3, varios de ellos controlados desde JavaScript:
 
 - **Navbar:** menú de navegación.
 - **Container:** organización del contenido.
@@ -131,6 +131,72 @@ El proyecto puede utilizar los siguientes componentes para mejorar la organizaci
 - **Buttons:** botones de navegación y acciones.
 - **Forms:** formularios para captura de información.
 - **Responsive utilities:** adaptación a diferentes tamaños de pantalla.
+- **Modal:** actualización de estatus e incidencias (`new bootstrap.Modal`).
+- **Alert:** avisos tras una acción (éxito, error, advertencia).
+- **Validación de formularios:** `is-valid`, `is-invalid` e `invalid-feedback`.
+- **Progress:** barra de avance del formulario de pedidos.
+- **Form switch + `data-bs-theme`:** cambio entre tema claro y oscuro.
+- **Tablas y listas:** pedidos y cola de solicitudes con botones de acción.
+
+## Interacciones implementadas
+
+Se implementaron **8 interacciones** (6 de la lista obligatoria y 2 de la libre). Todos los manejadores son **funciones con nombre** registradas con `addEventListener` (no hay atributos `onclick` en el HTML) y se usa **delegación de eventos** en `productos.js`, `pedidos.js` y `rnf04-comunicaciones.js`.
+
+| # | Interacción | Integrante responsable | Selectores usados | Eventos usados | Componente Bootstrap | Archivos |
+| - | ----------- | ---------------------- | ----------------- | -------------- | -------------------- | -------- |
+| 1 | Validación de formulario en tiempo real | Miguel | `getElementById`, `checkValidity()` | `input`, `blur` / `focusout`, `submit`, `preventDefault()` | `is-valid`, `is-invalid`, `invalid-feedback` | `iniciosesion.js`, `pedidos.js` |
+| 2 | Modal con información dinámica | Miguel | `getElementById`, `closest()` | `click` (delegado), `submit`, `dataset` (`data-id`) | Modal | `productos.js`, `pedidos.js` |
+| 3 | Notificación tras una acción | Miguel | `getElementById` | `submit`, `click` | Alert (`alert-success`, `alert-danger`, `alert-warning`) | `pedidos.js`, `productos.js`, `solicitudes.js`, `formularios.js` |
+| 4 | Filtrado y búsqueda de elementos | Miguel | `getElementById`, `querySelector` | `input`, `submit`, `reset`, `classList.toggle('d-none')` | Cards, form-control | `busquedas.js`, `productos.js` |
+| 5 | Agregar y eliminar elementos | Aarón (confirmar) | `getElementById`, `closest()` | `click` (delegado), `input`, `createElement`, `appendChild`, `remove()` | Lista con botones `btn-outline-danger` | `rnf04-comunicaciones.js` |
+| 6 | Cambio de tema claro/oscuro | Rodrigo (confirmar) | `querySelector`, `getElementById` | `change`, `classList`, `data-bs-theme` | Navbar, form-switch | `tema.js`, `tema.css` |
+| L1 | Mostrar/ocultar contraseña | Miguel | `getElementById`, `querySelector` | `click` | Input group, botón | `iniciosesion.js` |
+| L2 | Barra de progreso del formulario | Geazul (confirmar) | `getElementById`, `querySelector` | `input` (delegado), `focusout` (delegado), `reset` | Progress (`w-25`, `w-50`, `w-75`, `w-100`) | `pedidos.js`, `pedidos.html` |
+
+### Justificación de los selectores
+
+- **`getElementById`**: para un solo elemento con `id` único (formularios, tablas, botones). Es el método más directo y claro.
+- **`querySelector`**: para el primer elemento que coincida con una clase o atributo dentro de otro nodo (por ejemplo, el `<i>` dentro de un botón o los nodos de una tarjeta recién creada).
+- **`querySelectorAll`**: cuando hay varios elementos y se necesitan todos (por ejemplo, todos los formularios con la clase `needs-validation`).
+- **`closest()`**: dentro de la delegación de eventos, para subir desde el elemento pulsado hasta el botón que tiene `data-id`.
+
+### Capturas de pantalla
+
+Cada captura se guarda en `img/capturas/` y se muestra aquí.
+
+<!-- Para agregar una captura, guardar la imagen en img/capturas/ y escribir debajo de su título: ![Descripción](img/capturas/nombre.png) -->
+
+#### 1. Validación en tiempo real
+_Captura pendiente._
+
+#### 2. Modal con información dinámica
+_Captura pendiente._
+
+#### 3. Notificación tras una acción
+_Captura pendiente._
+
+#### 4. Filtrado y búsqueda
+_Captura pendiente._
+
+#### 5. Agregar y eliminar elementos
+_Captura pendiente._
+
+#### 6. Cambio de tema claro/oscuro
+_Captura pendiente._
+
+#### L1. Mostrar/ocultar contraseña
+_Captura pendiente._
+
+#### L2. Barra de progreso
+_Captura pendiente._
+
+## Sitio publicado
+
+GitHub Pages: https://naomivimid-lang.github.io/Vochito-apps-2026/
+
+## Evidencia del tablero Kanban
+
+_Pegar aquí el enlace o la captura del tablero de GitHub Projects con una tarjeta por interacción._
 
 ## Flujo de trabajo con Git y GitHub
 
@@ -162,7 +228,7 @@ Merge a main
 1. Clonar o descargar el repositorio.
 2. Abrir la carpeta del proyecto en Visual Studio Code.
 3. Verificar que las carpetas `css/`, `img/` y `js/` estén disponibles.
-4. Abrir el archivo `inicio.html`.
+4. Abrir el archivo `index.html`.
 5. Ejecutarlo con la extensión Live Server.
 6. Comprobar que las páginas, imágenes, estilos y enlaces funcionen correctamente.
 
@@ -184,7 +250,19 @@ Merge a main
 
 El equipo continúa trabajando en las páginas, los estilos, las funcionalidades y los requerimientos establecidos.
 
-## Refrexiones
+## Reflexión del equipo
+
+La interacción más difícil fue lograr que JavaScript funcionara correctamente con los componentes de Bootstrap, sobre todo el modal y la validación en tiempo real, porque había que entender cómo se relacionan los eventos con las acciones del usuario.
+También costó coordinar las ramas y los pull requests para que todos aportáramos.
+La delegación de eventos nos ofrece la ventaja de usar un solo controlador para varios elementos, incluso para los que se crean después de cargar la página, como los botones de la tabla de pedidos o de la cola de solicitudes.
+Gracias a eso el código es más corto, más ordenado y más fácil de mantener.
+Al combinar JavaScript con Bootstrap aprendimos que Bootstrap aporta la estructura y los estilos de los componentes, mientras que JavaScript les da comportamiento.
+Con `classList` cambiamos clases como `is-invalid`, `d-none` o `w-50`, y con `data-bs-theme` cambiamos todo el tema del sitio.
+También aprendimos a identificar errores en la consola y a buscar soluciones apoyándonos entre compañeros.
+La distribución de actividades nos permitió aprovechar las habilidades de cada integrante.
+En general, esta práctica mejoró nuestros conocimientos de JavaScript, nuestra comunicación y nuestra forma de trabajar en equipo.
+
+### Reflexiones individuales
 
 **GEAZUL**
 Considero que nuestro equipo ha trabajado de manera positiva, ya que todos hemos colaborado para cumplir con las actividades. Una de las interacciones más difíciles fue hacer que JavaScript funcionara correctamente con los componentes de Bootstrap, porque necesitábamos comprender cómo conectar los eventos con las acciones de cada elemento. La delegación de eventos nos ayuda a organizar mejor el código y permite manejar las acciones de varios elementos desde un mismo controlador. También aprendimos que Bootstrap facilita la creación del diseño de una página web, mientras que JavaScript permite agregar funciones interactivas. Aunque en ocasiones tenemos diferentes ideas, tratamos de escucharnos y llegar a acuerdos para continuar trabajando. Además, aprendimos a identificar errores y buscar soluciones con el apoyo de nuestros compañeros. La distribución de actividades nos permitió aprovechar las habilidades de cada integrante. En general, esta práctica nos ayudó a mejorar nuestros conocimientos, nuestra comunicación y nuestra forma de trabajar en equipo.

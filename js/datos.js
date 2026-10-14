@@ -92,10 +92,17 @@ const Bochito = (() => {
 
   /** Botón "Cerrar sesión" y nombre del usuario en las páginas protegidas. */
   function activarBarraSesion(sesion) {
+    // getElementById: ambos elementos tienen id único en las páginas protegidas.
     const nombre = document.getElementById("usuarioActual");
     if (nombre) nombre.textContent = sesion.correo;
     const salir = document.getElementById("btnSalir");
-    if (salir) salir.addEventListener("click", () => { cerrarSesion(); window.location.href = "iniciosesion.html"; });
+
+    /** Evento click: cierra la sesión y vuelve al inicio de sesión. */
+    function alCerrarSesion() {
+      cerrarSesion();
+      window.location.href = "iniciosesion.html";
+    }
+    if (salir) salir.addEventListener("click", alCerrarSesion);
   }
 
   return { ESTADOS, getPedidos, savePedidos, agregarPedido, getSesion, iniciarSesion, cerrarSesion,

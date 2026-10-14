@@ -9,6 +9,7 @@ const MAX_INTENTOS = 5;
 const MINUTOS_BLOQUEO = 5;
 const CLAVE_BLOQUEO = "bochito_bloqueo";
 
+// getElementById: todos los campos del login tienen id único.
 const form = document.getElementById("formLogin");
 const correo = document.getElementById("correo");
 const contrasena = document.getElementById("contrasena");
@@ -41,14 +42,32 @@ function actualizarEstadoFormulario() {
   if (min > 0) mostrarAlerta(`Cuenta bloqueada temporalmente. Intenta de nuevo en ${min} min.`, "danger");
 }
 
-// Mostrar/ocultar contraseña
-document.getElementById("verContrasena").addEventListener("click", (e) => {
+/** Evento click: mostrar/ocultar contraseña (cambia el type del input y el ícono del botón). */
+function alternarContrasena(e) {
   const visible = contrasena.type === "text";
   contrasena.type = visible ? "password" : "text";
+  // querySelector: dentro del botón solo hay un <i>, basta el primero.
   e.currentTarget.querySelector("i").className = visible ? "fa-solid fa-eye" : "fa-solid fa-eye-slash";
-});
+}
 
-form.addEventListener("submit", (e) => {
+/** Eventos input/blur: validación en tiempo real del correo y de la contraseña. */
+function validarCampoEnVivo(e) {
+  const campo = e.target;
+  if (campo === correo) {
+    // No marcar error mientras el campo sigue vacío y no se ha salido de él
+    if (campo.value === "" && e.type === "input") return campo.classList.remove("is-invalid", "is-valid");
+    const ok = campo.checkValidity() && campo.value.trim() !== "";
+    campo.classList.toggle("is-invalid", !ok);
+    campo.classList.toggle("is-valid", ok);
+  } else if (campo === contrasena) {
+    const ok = campo.value.length > 0;
+    campo.classList.toggle("is-invalid", !ok && e.type === "blur");
+    if (ok) campo.classList.remove("is-invalid");
+  }
+}
+
+/** Evento submit: valida el formato, verifica credenciales y controla los intentos. */
+function alEnviarLogin(e) {
   e.preventDefault();
   if (minutosRestantes() > 0) return actualizarEstadoFormulario();
 
@@ -81,7 +100,14 @@ form.addEventListener("submit", (e) => {
   }
   guardarBloqueo(b);
   mostrarAlerta(`Correo o contraseña incorrectos. Te quedan ${MAX_INTENTOS - b.intentos} intento(s).`, "danger");
-});
+}
+
+document.getElementById("verContrasena").addEventListener("click", alternarContrasena);
+form.addEventListener("submit", alEnviarLogin);
+correo.addEventListener("input", validarCampoEnVivo);
+correo.addEventListener("blur", validarCampoEnVivo);
+contrasena.addEventListener("input", validarCampoEnVivo);
+contrasena.addEventListener("blur", validarCampoEnVivo);
 
 // Si ya hay sesión, ir directo a pedidos
 if (Bochito.getSesion()) window.location.href = "pedidos.html";

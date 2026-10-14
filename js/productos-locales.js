@@ -30,17 +30,17 @@ function tarjeta(p) {
   col.innerHTML = `
     <div class="card h-100 shadow-sm border-0 p-3">
       <div class="card-body d-flex flex-column">
-        <div class="rounded-circle d-flex align-items-center justify-content-center mb-3"
-             style="width: 56px; height: 56px; background-color: #d6eaf0">
-          <i class="fa-solid ${ICONOS[p.categoria]} fs-4" style="color: #03455b" aria-hidden="true"></i>
+        <div class="icono-circulo fondo-azul rounded-circle d-flex align-items-center justify-content-center mb-3">
+          <i class="fa-solid ${ICONOS[p.categoria]} fs-4 icono-azul-oscuro" aria-hidden="true"></i>
         </div>
-        <span class="p-cat small fw-bold" style="color: #187171"></span>
+        <span class="p-cat small fw-bold texto-verde"></span>
         <h2 class="p-nombre h5 mt-1"></h2>
         <p class="p-desc text-muted mb-2"></p>
         <p class="small mb-3"><i class="fa-solid fa-store" aria-hidden="true"></i> <span class="p-tienda"></span></p>
         <strong class="p-precio fs-5 mt-auto"></strong>
       </div>
     </div>`;
+  // querySelector: la tarjeta es un nodo nuevo sin id; se localizan sus partes por clase.
   col.querySelector(".p-cat").textContent = p.categoria;
   col.querySelector(".p-nombre").textContent = p.nombre;
   col.querySelector(".p-desc").textContent = p.descripcion;
