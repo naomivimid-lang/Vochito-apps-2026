@@ -199,7 +199,24 @@ A pesar de no tener conocimientos previos de como utilizar javascript y trabajar
 
 **Aaron**
 
-Formar parte del equipo asignado me ha permitido aprender, convivir y colaborar de manera muy enriquecedora. Aunque al principio no contaba con conocimientos previos en JavaScript ni experiencia trabajando en un equipo dedicado al desarrollo de software, mi proceso de adaptación ha sido sumamente positivo. Considero que el respeto, la responsabilidad y la comunicación son pilares fundamentales para alcanzar nuestros objetivos, y esto se refleja claramente en la disposición de mis compañeros para resolver mis dudas y en nuestra excelente organización mediante videollamadas para planificar las tareas. Lo más destacable es el compromiso colectivo, ya que todos cumplimos con las actividades asignadas por nuestra líder, valorando también sus propias aportaciones al proyecto. Mi propósito es seguir dando lo mejor de mí, aprender de los demás y contribuir a este gran ambiente de compañerismo.
+**Reflexión personal del equipo**
+
+Formar parte de mi equipo ha sido una experiencia muy bonita, porque he aprendido cosas nuevas y también he podido convivir y trabajar con mis compañeros. Al principio no tenía conocimientos de JavaScript ni había trabajado en un equipo dedicado al desarrollo de software, pero poco a poco me he ido adaptando gracias al apoyo de todos. Considero que el respeto, la comunicación y la responsabilidad son muy importantes para que podamos trabajar bien juntos. Algo que me gusta de mi equipo es que, cuando tengo dudas o se nos presenta algún problema, mis compañeros están dispuestos a ayudarme y buscamos la manera de encontrar una solución. También me parece muy buena la organización de las videollamadas, porque nos permiten ponernos de acuerdo y repartir las actividades. Nuestra líder nos ayuda a organizarnos y cada integrante aporta algo importante al proyecto. Me siento contenta de formar parte de este equipo, porque además de aprender sobre programación, estoy aprendiendo a trabajar con otras personas. Espero seguir mejorando, aportar nuevas ideas y continuar trabajando con mis compañeros de la misma manera.
+
 **Naomi**
 
 Durante esta práctica, como equipo aprendimos la importancia de trabajar juntos y compartir nuestros conocimientos. La interacción más difícil fue lograr que JavaScript funcionara correctamente con los componentes de Bootstrap, ya que tuvimos que comprender cómo se relacionaban los eventos con las acciones del usuario. La delegación de eventos nos ofrece la ventaja de utilizar un solo controlador para varios elementos, lo que permite tener un código más organizado y sencillo. También aprendimos que Bootstrap facilita el diseño de páginas web mediante componentes prediseñados. Al combinar JavaScript con Bootstrap, comprendimos cómo agregar interactividad a elementos como botones, menús y formularios. Además, mejoramos nuestra capacidad para resolver errores y encontrar soluciones. La comunicación y la colaboración fueron fundamentales para completar las actividades. Finalmente, esta experiencia nos ayudó a fortalecer nuestros conocimientos y a trabajar mejor como equipo.
+
+## Evidencias
+
+![Trabajo en equipo](img/f1f.jpeg)
+![Trabajo en equipo](img/f2f.jpeg)
+![Trabajo en equipo](img/f3f.jpeg)
+![Trabajo en equipo](img/f4f.jpeg)
+![Trabajo en equipo](img/f5f.jpeg)
+![Trabajo en equipo](img/f6f.jpeg)
+![Trabajo en equipo](img/f7f.jpeg)
+![Trabajo en equipo](img/f8f.jpeg)
+![Trabajo en equipo](img/f9f.jpeg)
+![Trabajo en equipo](img/f10f.jpeg)
+![Trabajo en equipo](img/f11f.jpeg)
