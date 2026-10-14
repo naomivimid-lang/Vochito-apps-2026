@@ -2,16 +2,16 @@
    VARIABLES Y REGLAS BASE
    =================================================== */
 :root {
-  --color-navbar-bg: #111e2e;
-  --color-page-bg: #eaf3ee;
-  --color-content-bg: #f7faf8;
-  --color-text-main: #1d332d;
-  --color-text-muted: #556b63;
-  --color-primary-green: #59b38c;
-  --color-border: #d2e4db;
+  --color-navbar-bg: #03455b;
+  --color-page-bg: #f4f8f9;
+  --color-content-bg: #ffffff;
+  --color-text-main: #03455b;
+  --color-text-muted: #4f6670;
+  --color-primary-green: #187171;
+  --color-border: #d6e2e6;
 
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Roboto', sans-serif;
+  --font-serif: 'Roboto Flex', sans-serif;
+  --font-sans: 'Roboto Flex', sans-serif;
 }
 
 * {
@@ -36,87 +36,6 @@ body {
 }
 .align-text-top {
   vertical-align: text-top !important;
-}
-
-/* ===================================================
-   NAVBAR / CABECERA
-   =================================================== */
-.navbar {
-  background-color: var(--color-navbar-bg);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 40px;
-  color: #ffffff;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 28px;
-}
-
-.nav-links a {
-  color: #e2e8f0;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--color-primary-green);
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.search-box {
-  position: relative;
-}
-
-.search-box input {
-  padding: 8px 36px 8px 16px;
-  border-radius: 20px;
-  border: none;
-  width: 240px;
-  font-size: 14px;
-  outline: none;
-}
-
-.search-box .search-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #64748b;
-}
-
-.user-btn, .cart-btn {
-  background-color: #60a5fa;
-  border: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.cart-btn {
-  background-color: #f472b6;
 }
 
 /* ===================================================
@@ -288,7 +207,7 @@ body {
 
 /* CARD DE SOPORTE */
 .support-card {
-  background-color: #e0f2ed;
+  background-color: #e3eef1;
   border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 24px 32px;
@@ -371,4 +290,30 @@ body {
 .footer-item p {
   font-size: 12px;
   color: var(--color-text-muted);
+}
+/* Celulares: la barra lateral pasa arriba del contenido */
+@media (max-width: 768px) {
+  .main-layout,
+  .footer-banner,
+  .support-card {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .content-area,
+  .footer-banner {
+    padding: 24px 16px;
+  }
+
+  .footer-banner,
+  .support-card {
+    gap: 16px;
+  }
+
+  .support-card {
+    align-items: flex-start;
+  }
 }

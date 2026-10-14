@@ -1,8 +1,8 @@
 :root {
-  --primary-dark: #124e53;
-  --primary-teal: #19827e;
-  --accent-yellow: #ffc107;
-  --bg-light: #f8f9fa;
+  --primary-dark: #03455b;
+  --primary-teal: #187171;
+  --accent-yellow: #f2a900;
+  --bg-light: #f4f8f9;
   --text-color: #333333;
   --white: #ffffff;
 }
@@ -20,27 +20,7 @@ body {
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.navbar-brand {
-  font-family: "Roboto Slab", serif;
-}
 
-/* Navbar */
-.header-bochito {
-  background-color: var(--primary-dark) !important;
-  padding: 12px 24px;
-}
-
-.logo-img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-}
 
 /* Iconografía oficial en círculos pasteles */
 .icon-circle {

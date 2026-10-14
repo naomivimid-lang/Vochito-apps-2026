@@ -1,9 +1,9 @@
 /* Estilo compartido de Bochito */
 :root {
-    --azul-oscuro: #06485b;
-    --verde-azulado: #197575;
-    --amarillo: #ffb600;
-    --fondo: #f3f7f8;
+    --azul-oscuro: #03455b;
+    --verde-azulado: #187171;
+    --amarillo: #f2a900;
+    --fondo: #f4f8f9;
     --texto: #263238;
     --blanco: #ffffff;
 }
@@ -11,26 +11,8 @@
 html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 body {
     margin: 0; background: var(--fondo); color: var(--texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto Flex", sans-serif;
 }
-.navbar-bochito { background: var(--azul-oscuro); padding: 12px 0; }
-.navbar-brand { gap: 9px; }
-.logo {
-    width: 56px; height: 56px; border-radius: 50%;
-    border: 2px solid white; object-fit: cover; background: white;
-}
-.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-.brand-text strong { font-size: 20px; }
-.brand-text small { font-size: 12px; font-weight: normal; }
-.navbar-bochito .nav-link { color: white; font-size: 14px; }
-.navbar-bochito .nav-link:hover,
-.navbar-bochito .nav-link:focus,
-.navbar-bochito .nav-link.active { color: var(--amarillo); }
-.btn-acceso {
-    background: var(--amarillo); color: var(--azul-oscuro);
-    border-radius: 25px; padding: 10px 20px; font-weight: bold;
-}
-.btn-acceso:hover { background: #eaa600; color: var(--azul-oscuro); }
 .hero { background: var(--verde-azulado); color: white; padding: 55px 15px; }
 .hero h1 { font-size: 40px; font-weight: bold; margin: 10px 0 12px; }
 .hero p { font-size: 18px; max-width: 850px; margin: 0 auto; }
@@ -66,7 +48,7 @@ body {
     padding: 11px 18px; font-weight: bold;
 }
 .card .btn-bochito { width: 100%; }
-.btn-bochito:hover, .btn-bochito:focus { background: #08647a; color: white; }
+.btn-bochito:hover, .btn-bochito:focus { background: var(--verde-azulado); color: white; }
 .btn-secundario {
     border: 1px solid var(--azul-oscuro); color: var(--azul-oscuro);
     background: white; border-radius: 25px; padding: 10px 18px;
@@ -88,11 +70,6 @@ body {
 }
 .accion-item p { margin-bottom: 0; }
 .titulo-seccion { margin-bottom: 20px !important; }
-.footer-bochito { background: var(--azul-oscuro); color: white; padding: 20px 10px; font-size: 13px; }
-@media (max-width: 991px) {
-    .navbar-nav { align-items: stretch !important; padding-top: 12px; }
-    .btn-acceso { display: inline-block; text-align: center; margin-top: 8px; }
-}
 @media (max-width: 576px) {
     .hero { padding: 40px 15px; }
     .hero h1 { font-size: 29px; }
