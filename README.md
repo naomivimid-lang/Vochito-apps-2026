@@ -96,7 +96,7 @@ Vochito-apps-2026/
 | `iniciosesion.html` | Interfaz de inicio de sesión.               |
 | `catalogo.html`     | Catálogo de productos.                      |
 
-### ⚙️ Páginas relacionadas con funcionalidades
+### Páginas relacionadas con funcionalidades
 
 | Archivo                  | Propósito                                           |
 | ------------------------ | --------------------------------------------------- |
