@@ -62,6 +62,42 @@
     </div>
 </div>
 
+<div class="mb-4">
+    <label for="imagen" class="form-label">Imagen del producto <span class="text-muted small">(opcional)</span></label>
+    <div class="d-flex align-items-center gap-3">
+        {{-- Vista previa: la imagen actual al editar, o la que se elija en el campo --}}
+        <div id="vistaPrevia">
+            @include('productos._imagen', ['producto' => $producto + ['nombre' => 'Producto'], 'clase' => 'producto-miniatura producto-miniatura-grande'])
+        </div>
+        <div class="flex-grow-1">
+            <input type="file" id="imagen" name="imagen" accept="image/jpeg,image/png,image/webp"
+                   class="form-control @error('imagen') is-invalid @enderror">
+            @error('imagen')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+            <div class="form-text">
+                JPG, PNG o WEBP de hasta 2 MB.
+                @if (! empty($producto['imagen'])) Si no eliges otra, se conserva la actual. @endif
+            </div>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+    // Muestra la imagen elegida antes de enviar el formulario.
+    document.getElementById('imagen').addEventListener('change', (e) => {
+        const archivo = e.target.files[0];
+        if (!archivo) return;
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(archivo);
+        img.alt = 'Vista previa';
+        img.className = 'producto-miniatura producto-miniatura-grande';
+        document.getElementById('vistaPrevia').replaceChildren(img);
+    });
+</script>
+@endpush
+
 <div class="d-flex flex-column flex-sm-row gap-2">
     <button class="btn btn-{{ $color }}"><i class="bi {{ $icono }}"></i> {{ $boton }}</button>
     <a href="{{ route('productos.index') }}" class="btn btn-outline-secondary">Cancelar</a>

@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 {{-- EJERCICIO 3: el navegador solo envía GET/POST; Laravel simula PUT con @method --}}
-                <form method="POST" action="{{ route('productos.update', $producto['id']) }}" novalidate>
+                <form method="POST" action="{{ route('productos.update', $producto['id']) }}" enctype="multipart/form-data" novalidate>
                     @csrf
                     @method('PUT')
 

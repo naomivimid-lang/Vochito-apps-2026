@@ -61,6 +61,7 @@
             <thead class="table-light">
                 <tr>
                     <th>#</th>
+                    <th>Imagen</th>
                     <th>Producto</th>
                     <th>Tienda</th>
                     <th>Categoría</th>
@@ -72,6 +73,7 @@
                 @forelse ($productos as $p)
                     <tr>
                         <td class="text-muted">{{ $p['id'] }}</td>
+                        <td>@include('productos._imagen', ['producto' => $p, 'clase' => 'producto-miniatura'])</td>
                         <td class="fw-semibold">{{ $p['nombre'] }}</td>
                         <td><i class="bi bi-shop text-muted"></i> {{ $p['tienda'] }}</td>
                         <td><span class="badge text-bg-secondary">{{ $p['categoria'] }}</span></td>
@@ -91,7 +93,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="6" class="text-center text-muted py-4">
+                        <td colspan="7" class="text-center text-muted py-4">
                             <i class="bi bi-inbox fs-3 d-block"></i> Sin resultados
                         </td>
                     </tr>
@@ -104,7 +106,8 @@
 {{-- Móvil: tarjetas --}}
 <div class="d-md-none">
     @forelse ($productos as $p)
-        <div class="card shadow-sm border-0 mb-2 tarjeta-producto">
+        <div class="card shadow-sm border-0 mb-2 tarjeta-producto overflow-hidden">
+            @include('productos._imagen', ['producto' => $p, 'clase' => 'producto-imagen'])
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start gap-2">
                     <div>

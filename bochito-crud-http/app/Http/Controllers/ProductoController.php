@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * CRUD de productos de las tiendas locales de Bochito.
@@ -19,6 +20,7 @@ class ProductoController extends Controller
         'tienda'    => ['required', 'string', 'min:3', 'max:80'],
         'categoria' => ['required', 'string', 'max:50'],
         'precio'    => ['required', 'numeric', 'min:0'],
+        'imagen'    => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
     ];
 
     private const MENSAJES = [
@@ -33,6 +35,10 @@ class ProductoController extends Controller
         'precio.required'    => 'El precio es obligatorio.',
         'precio.numeric'     => 'El precio debe ser un número.',
         'precio.min'         => 'El precio no puede ser negativo.',
+        'imagen.image'       => 'El archivo debe ser una imagen.',
+        'imagen.mimes'       => 'La imagen debe ser JPG, PNG o WEBP.',
+        'imagen.max'         => 'La imagen no puede pesar más de 2 MB.',
+        'imagen.uploaded'    => 'No se pudo subir la imagen; revisa que pese menos de 2 MB.',
     ];
 
     /** Datos iniciales (simulan una tabla): catálogo de tiendas locales de Bochito. */
@@ -60,6 +66,22 @@ class ProductoController extends Controller
     private function guardar(Request $request, array $productos): void
     {
         $request->session()->put('productos', $productos);
+    }
+
+    /**
+     * Guarda la imagen subida (si hay) en storage/app/public/productos y devuelve su ruta.
+     * Si no se subió una nueva, conserva la anterior; si se subió, borra la anterior.
+     */
+    private function imagen(Request $request, ?string $anterior = null): ?string
+    {
+        if (! $request->hasFile('imagen')) {
+            return $anterior;
+        }
+        if ($anterior) {
+            Storage::disk('public')->delete($anterior);
+        }
+
+        return $request->file('imagen')->store('productos', 'public');
     }
 
     /** Listas para los filtros y el autocompletado del formulario. */
@@ -128,6 +150,7 @@ class ProductoController extends Controller
         $productos = $this->todos($request);
         $id = (empty($productos) ? 0 : max(array_keys($productos))) + 1;
 
+        $datos['imagen'] = $this->imagen($request);
         $productos[$id] = ['id' => $id] + $datos;
         $this->guardar($request, $productos);
 
@@ -151,6 +174,7 @@ class ProductoController extends Controller
 
         $datos = $request->validate(self::REGLAS, self::MENSAJES);
 
+        $datos['imagen'] = $this->imagen($request, $productos[$id]['imagen'] ?? null);
         $productos[$id] = ['id' => $id] + $datos;
         $this->guardar($request, $productos);
 
@@ -165,6 +189,9 @@ class ProductoController extends Controller
         abort_unless(isset($productos[$id]), 404);
 
         $nombre = $productos[$id]['nombre'];
+        if (! empty($productos[$id]['imagen'])) {
+            Storage::disk('public')->delete($productos[$id]['imagen']);
+        }
         unset($productos[$id]);
         $this->guardar($request, $productos);
 

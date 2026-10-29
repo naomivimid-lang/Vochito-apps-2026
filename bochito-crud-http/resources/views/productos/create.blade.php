@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 {{-- EJERCICIO 2: POST con @csrf y validación --}}
-                <form method="POST" action="{{ route('productos.store') }}" novalidate>
+                <form method="POST" action="{{ route('productos.store') }}" enctype="multipart/form-data" novalidate>
                     @csrf
 
                     @include('productos._form', [
