@@ -1,0 +1,26 @@
+// Fuente del proyecto Bochito
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;700&display=swap');
+
+// Variables propias (antes de Bootstrap para sobrescribir las suyas)
+@import 'variables';
+
+// Bootstrap 5
+@import 'bootstrap/scss/bootstrap';
+
+// ---- Ajustes propios ----
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.encabezado {
+    background: linear-gradient(135deg, $primary, $success);
+}
+
+.precio {
+    font-variant-numeric: tabular-nums;
+}
+
+.tarjeta-producto .card-title {
+    font-size: 1rem;
+}
